@@ -24,13 +24,19 @@ Build and conduct the scoped report-grading study using existing resources, crea
 - [x] Independent reviewer PASS on unchanged local candidate 0424be7750a715f632ef700df04d35cc5e393715ac19c81d5c9aa45b134beafd.
 - [x] Independent offline/native QA and authentic local-model admission; raw/projection replay and public cold/privacy checks passed before study.
 - [x] Freeze and conduct all 104 valid study cells; preserve raw outcomes and all four canaries within 108/120 attempts.
-- [ ] Complete readable report, demo and course responses in order as permitted.
-- [ ] Privacy-review public artifacts, create public GitHub repo, commit/push and verify remote parity.
-- [ ] Record exact completion, human-required course items, resource cleanup and next action.
+- [x] Complete readable report, reproducible demonstration and course-facing responses as permitted.
+- [x] Privacy-review public artifacts, create public GitHub repo, commit/push and verify remote parity.
+- [x] Record exact completion, user-owned course items, resource cleanup and next action.
 
 ## Review
 Two Codex canaries returned the requested constant JSON alongside a provider bootstrap error. Neither reached the marker predicate. A version-matched source audit could not establish executor observability with the host enabled, so Codex v1 closed with zero study grades. Original evidence and both charged reservations remain unchanged.
 
 The separately preregistered Ollama v2 passed review, native QA and authentic admission. The protocol was frozen and public preregistration d4bd17f was pushed before outcomes. All 104 grading calls are valid, with no tuning or retries; four charged canaries bring the total to 108. Primary framing and mitigation results are below their predeclared two-case screens.
 
-One post-outcome publication escape was diagnosed and preserved: redaction expanded a valid 300-character reason to 305. A separate publisher outside the frozen scientific closure changes only that sanitized display reason. Its portable actual-producer regression passes, the strict public reader accepts the complete amended bundle, and cold public/private analyses agree apart from scope. Final coherent result/publisher review is APPROVED and independent QA is FINAL_PASS, including all 105 tests without skips. The original 25-file scientific closure remains byte-exact. Result publication and final course-link readback are the remaining release steps.
+One post-outcome publication escape was diagnosed and preserved: redaction expanded a valid 300-character reason to 305. A separate publisher outside the frozen scientific closure changes only that sanitized display reason. Its portable actual-producer regression passes, the strict public reader accepts the complete amended bundle, and cold public/private analyses agree apart from scope. Final coherent result/publisher review is APPROVED and independent QA is FINAL_PASS, including all 105 tests without skips. The original 25-file scientific closure remains byte-exact.
+
+The core result commit 32f837754a4470e8a1e34cf3b6c9bbbb6246c08c was pushed and matched the remote. Its publication sequence incorrectly continued after a staged-byte check reported line-ending normalization. Independent Git verification then proved exactly three CRLF-to-LF changes in presentation files, unchanged scientific and manifest-bound files, and complete cold replay from the actual published archive. See the GIT_PUBLICATION_PASS attestation; subsequent mutations require successful blocking checks first. This final bookkeeping/attestation does not alter the reviewed scientific or publication payload.
+
+Course-facing summary, reflection and public draft links were saved and read back. Personal calendar commitments, facilitated participation and credentials remain user-owned and are not asserted by this technical release. The current interface limits formal feedback submission to facilitated cohorts. No social posts or membership purchases were made.
+
+Cleanup census found zero task-owned transport clients, the user's pre-existing Ollama daemon still running, and only the primary worktree. No extra worktree or local branch required deletion. Private raw evidence, the failed export and source archives are intentionally retained outside Git with a retention note. The next useful step is owner review of H16 and the primary-versus-secondary comparison; any further empirical work needs a separate preregistration.
