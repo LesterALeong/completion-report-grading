@@ -23,7 +23,7 @@ Build and conduct the scoped report-grading study using existing resources, crea
 - [x] Full integrated local v2 matrix: Ruff F and 101 tests pass without skips; strict HTTP worker, native custody, mixed history and private/public replay.
 - [x] Independent reviewer PASS on unchanged local candidate 0424be7750a715f632ef700df04d35cc5e393715ac19c81d5c9aa45b134beafd.
 - [x] Independent offline/native QA and authentic local-model admission; raw/projection replay and public cold/privacy checks passed before study.
-- [ ] Freeze and conduct the bounded experiment; preserve raw outcomes and failures.
+- [x] Freeze and conduct all 104 valid study cells; preserve raw outcomes and all four canaries within 108/120 attempts.
 - [ ] Complete readable report, demo and course responses in order as permitted.
 - [ ] Privacy-review public artifacts, create public GitHub repo, commit/push and verify remote parity.
 - [ ] Record exact completion, human-required course items, resource cleanup and next action.
@@ -31,4 +31,6 @@ Build and conduct the scoped report-grading study using existing resources, crea
 ## Review
 Two Codex canaries returned the requested constant JSON alongside a provider bootstrap error. Neither reached the marker predicate. A version-matched source audit could not establish executor observability with the host enabled, so Codex v1 closed with zero study grades. Original evidence and both charged reservations remain unchanged.
 
-The separate Ollama v2 uses the installed Qwen 3.5 9B quantized model, with exact runtime/model/template/default identities and fixed sampling controls. Cases, prompts, reports, oracle and statistical analysis remain byte-audited against v1. The global 120-attempt cap includes the two prior failures. The complete 101-test model-free matrix and Ruff F pass, including actual native inert HTTP and runner-to-public replay after private-data removal. A test fixture environment leak and inert sender buffering issue were corrected without changing scientific rules or the production worker. Candidate 0424be7750a715f632ef700df04d35cc5e393715ac19c81d5c9aa45b134beafd is archived unchanged and under independent review; native QA and authentic admission remain pending. No local inference, study grade, freeze, commit or push has occurred.
+The separately preregistered Ollama v2 passed review, native QA and authentic admission. The protocol was frozen and public preregistration d4bd17f was pushed before outcomes. All 104 grading calls are valid, with no tuning or retries; four charged canaries bring the total to 108. Primary framing and mitigation results are below their predeclared two-case screens.
+
+One post-outcome publication escape was diagnosed and preserved: redaction expanded a valid 300-character reason to 305. A separate publisher outside the frozen scientific closure changes only that sanitized display reason. Its portable actual-producer regression passes, the strict public reader accepts the complete amended bundle, and cold public/private analyses agree apart from scope. Final coherent result/publisher review is APPROVED and independent QA is FINAL_PASS, including all 105 tests without skips. The original 25-file scientific closure remains byte-exact. Result publication and final course-link readback are the remaining release steps.

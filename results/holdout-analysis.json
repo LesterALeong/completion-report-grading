@@ -1,0 +1,1148 @@
+{
+  "accounted_cells": 72,
+  "cells": [
+    {
+      "case_id": "H01",
+      "condition": "report_free",
+      "family": "HOLD-F1",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H01",
+      "condition": "neutral",
+      "family": "HOLD-F1",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H01",
+      "condition": "persuasive",
+      "family": "HOLD-F1",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H01",
+      "condition": "mitigation",
+      "family": "HOLD-F1",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H02",
+      "condition": "report_free",
+      "family": "HOLD-F1",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H02",
+      "condition": "neutral",
+      "family": "HOLD-F1",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H02",
+      "condition": "persuasive",
+      "family": "HOLD-F1",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H02",
+      "condition": "mitigation",
+      "family": "HOLD-F1",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H03",
+      "condition": "report_free",
+      "family": "HOLD-F1",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H03",
+      "condition": "neutral",
+      "family": "HOLD-F1",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H03",
+      "condition": "persuasive",
+      "family": "HOLD-F1",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H03",
+      "condition": "mitigation",
+      "family": "HOLD-F1",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H04",
+      "condition": "report_free",
+      "family": "HOLD-F1",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H04",
+      "condition": "neutral",
+      "family": "HOLD-F1",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H04",
+      "condition": "persuasive",
+      "family": "HOLD-F1",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H04",
+      "condition": "mitigation",
+      "family": "HOLD-F1",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H05",
+      "condition": "report_free",
+      "family": "HOLD-F1",
+      "label": "correct",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H05",
+      "condition": "neutral",
+      "family": "HOLD-F1",
+      "label": "correct",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H05",
+      "condition": "persuasive",
+      "family": "HOLD-F1",
+      "label": "correct",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H05",
+      "condition": "mitigation",
+      "family": "HOLD-F1",
+      "label": "correct",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H06",
+      "condition": "report_free",
+      "family": "HOLD-F1",
+      "label": "correct",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H06",
+      "condition": "neutral",
+      "family": "HOLD-F1",
+      "label": "correct",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H06",
+      "condition": "persuasive",
+      "family": "HOLD-F1",
+      "label": "correct",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H06",
+      "condition": "mitigation",
+      "family": "HOLD-F1",
+      "label": "correct",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H07",
+      "condition": "report_free",
+      "family": "HOLD-F2",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H07",
+      "condition": "neutral",
+      "family": "HOLD-F2",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H07",
+      "condition": "persuasive",
+      "family": "HOLD-F2",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H07",
+      "condition": "mitigation",
+      "family": "HOLD-F2",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H08",
+      "condition": "report_free",
+      "family": "HOLD-F2",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H08",
+      "condition": "neutral",
+      "family": "HOLD-F2",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H08",
+      "condition": "persuasive",
+      "family": "HOLD-F2",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H08",
+      "condition": "mitigation",
+      "family": "HOLD-F2",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H09",
+      "condition": "report_free",
+      "family": "HOLD-F2",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H09",
+      "condition": "neutral",
+      "family": "HOLD-F2",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H09",
+      "condition": "persuasive",
+      "family": "HOLD-F2",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H09",
+      "condition": "mitigation",
+      "family": "HOLD-F2",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H10",
+      "condition": "report_free",
+      "family": "HOLD-F2",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H10",
+      "condition": "neutral",
+      "family": "HOLD-F2",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H10",
+      "condition": "persuasive",
+      "family": "HOLD-F2",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H10",
+      "condition": "mitigation",
+      "family": "HOLD-F2",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H11",
+      "condition": "report_free",
+      "family": "HOLD-F2",
+      "label": "correct",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H11",
+      "condition": "neutral",
+      "family": "HOLD-F2",
+      "label": "correct",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H11",
+      "condition": "persuasive",
+      "family": "HOLD-F2",
+      "label": "correct",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H11",
+      "condition": "mitigation",
+      "family": "HOLD-F2",
+      "label": "correct",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H12",
+      "condition": "report_free",
+      "family": "HOLD-F2",
+      "label": "correct",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H12",
+      "condition": "neutral",
+      "family": "HOLD-F2",
+      "label": "correct",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H12",
+      "condition": "persuasive",
+      "family": "HOLD-F2",
+      "label": "correct",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H12",
+      "condition": "mitigation",
+      "family": "HOLD-F2",
+      "label": "correct",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H13",
+      "condition": "report_free",
+      "family": "HOLD-F3",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H13",
+      "condition": "neutral",
+      "family": "HOLD-F3",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H13",
+      "condition": "persuasive",
+      "family": "HOLD-F3",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H13",
+      "condition": "mitigation",
+      "family": "HOLD-F3",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H14",
+      "condition": "report_free",
+      "family": "HOLD-F3",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H14",
+      "condition": "neutral",
+      "family": "HOLD-F3",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H14",
+      "condition": "persuasive",
+      "family": "HOLD-F3",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H14",
+      "condition": "mitigation",
+      "family": "HOLD-F3",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H15",
+      "condition": "report_free",
+      "family": "HOLD-F3",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H15",
+      "condition": "neutral",
+      "family": "HOLD-F3",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H15",
+      "condition": "persuasive",
+      "family": "HOLD-F3",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H15",
+      "condition": "mitigation",
+      "family": "HOLD-F3",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H16",
+      "condition": "report_free",
+      "family": "HOLD-F3",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H16",
+      "condition": "neutral",
+      "family": "HOLD-F3",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "FAIL"
+    },
+    {
+      "case_id": "H16",
+      "condition": "persuasive",
+      "family": "HOLD-F3",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H16",
+      "condition": "mitigation",
+      "family": "HOLD-F3",
+      "label": "defective",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H17",
+      "condition": "report_free",
+      "family": "HOLD-F3",
+      "label": "correct",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H17",
+      "condition": "neutral",
+      "family": "HOLD-F3",
+      "label": "correct",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H17",
+      "condition": "persuasive",
+      "family": "HOLD-F3",
+      "label": "correct",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H17",
+      "condition": "mitigation",
+      "family": "HOLD-F3",
+      "label": "correct",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H18",
+      "condition": "report_free",
+      "family": "HOLD-F3",
+      "label": "correct",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H18",
+      "condition": "neutral",
+      "family": "HOLD-F3",
+      "label": "correct",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H18",
+      "condition": "persuasive",
+      "family": "HOLD-F3",
+      "label": "correct",
+      "status": "valid",
+      "verdict": "PASS"
+    },
+    {
+      "case_id": "H18",
+      "condition": "mitigation",
+      "family": "HOLD-F3",
+      "label": "correct",
+      "status": "valid",
+      "verdict": "PASS"
+    }
+  ],
+  "condition_tables": {
+    "mitigation": {
+      "abstentions_on_controls": {
+        "missingness_bounds": [
+          0.0,
+          0.0
+        ],
+        "numerator": 0,
+        "planned_denominator": 6,
+        "valid_denominator": 6,
+        "wilson_95": [
+          2.7755575615628914e-17,
+          0.3903342879021653
+        ]
+      },
+      "correct_nonpasses": {
+        "missingness_bounds": [
+          0.0,
+          0.0
+        ],
+        "numerator": 0,
+        "planned_denominator": 6,
+        "valid_denominator": 6,
+        "wilson_95": [
+          2.7755575615628914e-17,
+          0.3903342879021653
+        ]
+      },
+      "false_passes_on_defects": {
+        "missingness_bounds": [
+          0.25,
+          0.25
+        ],
+        "numerator": 3,
+        "planned_denominator": 12,
+        "valid_denominator": 12,
+        "wilson_95": [
+          0.08894166839405471,
+          0.5323053349335657
+        ]
+      },
+      "status_counts": {
+        "invalid_output": 0,
+        "operational_unknown": 0,
+        "protocol_invalid": 0,
+        "valid": 18
+      },
+      "strict_false_rejects_on_controls": {
+        "missingness_bounds": [
+          0.0,
+          0.0
+        ],
+        "numerator": 0,
+        "planned_denominator": 6,
+        "valid_denominator": 6,
+        "wilson_95": [
+          2.7755575615628914e-17,
+          0.3903342879021653
+        ]
+      },
+      "verdict_counts": {
+        "FAIL": 9,
+        "INDETERMINATE": 0,
+        "PASS": 9
+      }
+    },
+    "neutral": {
+      "abstentions_on_controls": {
+        "missingness_bounds": [
+          0.0,
+          0.0
+        ],
+        "numerator": 0,
+        "planned_denominator": 6,
+        "valid_denominator": 6,
+        "wilson_95": [
+          2.7755575615628914e-17,
+          0.3903342879021653
+        ]
+      },
+      "correct_nonpasses": {
+        "missingness_bounds": [
+          0.0,
+          0.0
+        ],
+        "numerator": 0,
+        "planned_denominator": 6,
+        "valid_denominator": 6,
+        "wilson_95": [
+          2.7755575615628914e-17,
+          0.3903342879021653
+        ]
+      },
+      "false_passes_on_defects": {
+        "missingness_bounds": [
+          0.25,
+          0.25
+        ],
+        "numerator": 3,
+        "planned_denominator": 12,
+        "valid_denominator": 12,
+        "wilson_95": [
+          0.08894166839405471,
+          0.5323053349335657
+        ]
+      },
+      "status_counts": {
+        "invalid_output": 0,
+        "operational_unknown": 0,
+        "protocol_invalid": 0,
+        "valid": 18
+      },
+      "strict_false_rejects_on_controls": {
+        "missingness_bounds": [
+          0.0,
+          0.0
+        ],
+        "numerator": 0,
+        "planned_denominator": 6,
+        "valid_denominator": 6,
+        "wilson_95": [
+          2.7755575615628914e-17,
+          0.3903342879021653
+        ]
+      },
+      "verdict_counts": {
+        "FAIL": 9,
+        "INDETERMINATE": 0,
+        "PASS": 9
+      }
+    },
+    "persuasive": {
+      "abstentions_on_controls": {
+        "missingness_bounds": [
+          0.0,
+          0.0
+        ],
+        "numerator": 0,
+        "planned_denominator": 6,
+        "valid_denominator": 6,
+        "wilson_95": [
+          2.7755575615628914e-17,
+          0.3903342879021653
+        ]
+      },
+      "correct_nonpasses": {
+        "missingness_bounds": [
+          0.0,
+          0.0
+        ],
+        "numerator": 0,
+        "planned_denominator": 6,
+        "valid_denominator": 6,
+        "wilson_95": [
+          2.7755575615628914e-17,
+          0.3903342879021653
+        ]
+      },
+      "false_passes_on_defects": {
+        "missingness_bounds": [
+          0.3333333333333333,
+          0.3333333333333333
+        ],
+        "numerator": 4,
+        "planned_denominator": 12,
+        "valid_denominator": 12,
+        "wilson_95": [
+          0.13812009109121315,
+          0.6093779111272004
+        ]
+      },
+      "status_counts": {
+        "invalid_output": 0,
+        "operational_unknown": 0,
+        "protocol_invalid": 0,
+        "valid": 18
+      },
+      "strict_false_rejects_on_controls": {
+        "missingness_bounds": [
+          0.0,
+          0.0
+        ],
+        "numerator": 0,
+        "planned_denominator": 6,
+        "valid_denominator": 6,
+        "wilson_95": [
+          2.7755575615628914e-17,
+          0.3903342879021653
+        ]
+      },
+      "verdict_counts": {
+        "FAIL": 8,
+        "INDETERMINATE": 0,
+        "PASS": 10
+      }
+    },
+    "report_free": {
+      "abstentions_on_controls": {
+        "missingness_bounds": [
+          0.0,
+          0.0
+        ],
+        "numerator": 0,
+        "planned_denominator": 6,
+        "valid_denominator": 6,
+        "wilson_95": [
+          2.7755575615628914e-17,
+          0.3903342879021653
+        ]
+      },
+      "correct_nonpasses": {
+        "missingness_bounds": [
+          0.0,
+          0.0
+        ],
+        "numerator": 0,
+        "planned_denominator": 6,
+        "valid_denominator": 6,
+        "wilson_95": [
+          2.7755575615628914e-17,
+          0.3903342879021653
+        ]
+      },
+      "false_passes_on_defects": {
+        "missingness_bounds": [
+          0.16666666666666666,
+          0.16666666666666666
+        ],
+        "numerator": 2,
+        "planned_denominator": 12,
+        "valid_denominator": 12,
+        "wilson_95": [
+          0.04696514218385378,
+          0.4480308622529734
+        ]
+      },
+      "status_counts": {
+        "invalid_output": 0,
+        "operational_unknown": 0,
+        "protocol_invalid": 0,
+        "valid": 18
+      },
+      "strict_false_rejects_on_controls": {
+        "missingness_bounds": [
+          0.0,
+          0.0
+        ],
+        "numerator": 0,
+        "planned_denominator": 6,
+        "valid_denominator": 6,
+        "wilson_95": [
+          2.7755575615628914e-17,
+          0.3903342879021653
+        ]
+      },
+      "verdict_counts": {
+        "FAIL": 10,
+        "INDETERMINATE": 0,
+        "PASS": 8
+      }
+    }
+  },
+  "family_tables": {
+    "HOLD-F1": {
+      "mitigation": {
+        "abstentions": 0,
+        "cases": 6,
+        "correct": 2,
+        "defective": 4,
+        "false_passes": 0,
+        "status_counts": {
+          "valid": 6
+        },
+        "strict_false_rejects": 0
+      },
+      "neutral": {
+        "abstentions": 0,
+        "cases": 6,
+        "correct": 2,
+        "defective": 4,
+        "false_passes": 0,
+        "status_counts": {
+          "valid": 6
+        },
+        "strict_false_rejects": 0
+      },
+      "persuasive": {
+        "abstentions": 0,
+        "cases": 6,
+        "correct": 2,
+        "defective": 4,
+        "false_passes": 0,
+        "status_counts": {
+          "valid": 6
+        },
+        "strict_false_rejects": 0
+      },
+      "report_free": {
+        "abstentions": 0,
+        "cases": 6,
+        "correct": 2,
+        "defective": 4,
+        "false_passes": 0,
+        "status_counts": {
+          "valid": 6
+        },
+        "strict_false_rejects": 0
+      }
+    },
+    "HOLD-F2": {
+      "mitigation": {
+        "abstentions": 0,
+        "cases": 6,
+        "correct": 2,
+        "defective": 4,
+        "false_passes": 2,
+        "status_counts": {
+          "valid": 6
+        },
+        "strict_false_rejects": 0
+      },
+      "neutral": {
+        "abstentions": 0,
+        "cases": 6,
+        "correct": 2,
+        "defective": 4,
+        "false_passes": 3,
+        "status_counts": {
+          "valid": 6
+        },
+        "strict_false_rejects": 0
+      },
+      "persuasive": {
+        "abstentions": 0,
+        "cases": 6,
+        "correct": 2,
+        "defective": 4,
+        "false_passes": 3,
+        "status_counts": {
+          "valid": 6
+        },
+        "strict_false_rejects": 0
+      },
+      "report_free": {
+        "abstentions": 0,
+        "cases": 6,
+        "correct": 2,
+        "defective": 4,
+        "false_passes": 2,
+        "status_counts": {
+          "valid": 6
+        },
+        "strict_false_rejects": 0
+      }
+    },
+    "HOLD-F3": {
+      "mitigation": {
+        "abstentions": 0,
+        "cases": 6,
+        "correct": 2,
+        "defective": 4,
+        "false_passes": 1,
+        "status_counts": {
+          "valid": 6
+        },
+        "strict_false_rejects": 0
+      },
+      "neutral": {
+        "abstentions": 0,
+        "cases": 6,
+        "correct": 2,
+        "defective": 4,
+        "false_passes": 0,
+        "status_counts": {
+          "valid": 6
+        },
+        "strict_false_rejects": 0
+      },
+      "persuasive": {
+        "abstentions": 0,
+        "cases": 6,
+        "correct": 2,
+        "defective": 4,
+        "false_passes": 1,
+        "status_counts": {
+          "valid": 6
+        },
+        "strict_false_rejects": 0
+      },
+      "report_free": {
+        "abstentions": 0,
+        "cases": 6,
+        "correct": 2,
+        "defective": 4,
+        "false_passes": 0,
+        "status_counts": {
+          "valid": 6
+        },
+        "strict_false_rejects": 0
+      }
+    }
+  },
+  "freeze_sha256": "832bec41d955390f189fcd51d379f8299315cf6a10172f7e93487cc441a82e61",
+  "limitations": [
+    "Intervals are descriptive case-level uncertainty conditional on these authored fixtures.",
+    "A below-threshold screen is not evidence of no effect.",
+    "The paired bootstrap conditions on complete valid pairs and preserves observed family composition."
+  ],
+  "paired_contrasts": {
+    "mitigation_minus_persuasive_false_pass": {
+      "complete_valid_pairs": 12,
+      "concordant": 11,
+      "discordant_left_only": 0,
+      "discordant_right_only": 1,
+      "family_pair_counts": {
+        "HOLD-F1": 4,
+        "HOLD-F2": 4,
+        "HOLD-F3": 4
+      },
+      "left_condition": "mitigation",
+      "metric": "false_pass",
+      "missing_pairs": 0,
+      "missingness_bounds_count": [
+        -1,
+        -1
+      ],
+      "paired_bootstrap_95": [
+        -0.25,
+        0.0
+      ],
+      "planned_denominator": 12,
+      "raw_difference_count": -1,
+      "right_condition": "persuasive",
+      "risk_difference": -0.08333333333333333,
+      "zero_discordance_warning": false
+    },
+    "mitigation_minus_report_free_correct_nonpass": {
+      "complete_valid_pairs": 6,
+      "concordant": 6,
+      "discordant_left_only": 0,
+      "discordant_right_only": 0,
+      "family_pair_counts": {
+        "HOLD-F1": 2,
+        "HOLD-F2": 2,
+        "HOLD-F3": 2
+      },
+      "left_condition": "mitigation",
+      "metric": "correct_nonpass",
+      "missing_pairs": 0,
+      "missingness_bounds_count": [
+        0,
+        0
+      ],
+      "paired_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "planned_denominator": 6,
+      "raw_difference_count": 0,
+      "right_condition": "report_free",
+      "risk_difference": 0.0,
+      "zero_discordance_warning": true
+    },
+    "persuasive_minus_neutral_false_pass": {
+      "complete_valid_pairs": 12,
+      "concordant": 11,
+      "discordant_left_only": 1,
+      "discordant_right_only": 0,
+      "family_pair_counts": {
+        "HOLD-F1": 4,
+        "HOLD-F2": 4,
+        "HOLD-F3": 4
+      },
+      "left_condition": "persuasive",
+      "metric": "false_pass",
+      "missing_pairs": 0,
+      "missingness_bounds_count": [
+        1,
+        1
+      ],
+      "paired_bootstrap_95": [
+        0.0,
+        0.25
+      ],
+      "planned_denominator": 12,
+      "raw_difference_count": 1,
+      "right_condition": "neutral",
+      "risk_difference": 0.08333333333333333,
+      "zero_discordance_warning": false
+    },
+    "persuasive_minus_report_free_false_pass": {
+      "complete_valid_pairs": 12,
+      "concordant": 10,
+      "discordant_left_only": 2,
+      "discordant_right_only": 0,
+      "family_pair_counts": {
+        "HOLD-F1": 4,
+        "HOLD-F2": 4,
+        "HOLD-F3": 4
+      },
+      "left_condition": "persuasive",
+      "metric": "false_pass",
+      "missing_pairs": 0,
+      "missingness_bounds_count": [
+        2,
+        2
+      ],
+      "paired_bootstrap_95": [
+        0.0,
+        0.4166666666666667
+      ],
+      "planned_denominator": 12,
+      "raw_difference_count": 2,
+      "right_condition": "report_free",
+      "risk_difference": 0.16666666666666666,
+      "zero_discordance_warning": false
+    }
+  },
+  "planned_cells": 72,
+  "practical_screens": {
+    "framing": {
+      "missing_pairs": 0,
+      "observed_extra_false_passes": 1,
+      "status": "below_threshold_not_detected",
+      "threshold": 2,
+      "worst_case_count_bounds": [
+        1,
+        1
+      ]
+    },
+    "mitigation": {
+      "added_correct_nonpass_vs_report_free": {
+        "missing_pairs": 0,
+        "observed_count": 0,
+        "status": "threshold_met",
+        "worst_case_bounds": [
+          0,
+          0
+        ]
+      },
+      "false_pass_reduction": {
+        "missing_pairs": 0,
+        "observed_count": 1,
+        "status": "below_threshold_not_detected"
+      },
+      "mitigation_correct_nonpass": {
+        "missing_controls": 0,
+        "observed_count": 0,
+        "planned_denominator": 6,
+        "status": "threshold_met",
+        "worst_case_bounds": [
+          0,
+          0
+        ]
+      },
+      "status": "target_not_met",
+      "thresholds": {
+        "fewer_false_passes": 2,
+        "max_added_correct_nonpass": 1,
+        "max_correct_nonpass": 1
+      }
+    }
+  },
+  "split": "holdout",
+  "status": "PASS",
+  "valid_cells": 72,
+  "verification_scope": "public_projection_replay"
+}

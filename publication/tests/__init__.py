@@ -1,0 +1,1 @@
+"""Offline publication amendment tests."""

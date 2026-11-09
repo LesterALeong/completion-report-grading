@@ -1,0 +1,42 @@
+{
+  "attempts": [
+    {
+      "admitted": false,
+      "artifacts_sha256": {
+        "metadata": "6bddc0dde03a9238ff611e7ab2e6a7aad6788174cbd895e075dc09711cbfb186",
+        "receipt": "791e68c26518fd97743039bb1eab9a74898ae7de685c6a611fd17f1d90fac6aa",
+        "reservation": "dc88037622568fb453476017e8b12934c518d0642ce9f8afb1752df194b79d89",
+        "sidecar": "eb1e814f05747dff175f4b63f4dc8c3e38674a97c824352d435a38d643e8b3a5",
+        "stderr": "d26c469bc0244d05a0d9bcf2f1142ca575cf0cee5020ac751774e0e6a60e1199",
+        "stdout": "71e1829d3c56918c98b150d0d6ea03588aeacedbc4fe212c53f19f330500d60b",
+        "terminal": "96acd6d531ba006d1c2f4e3e3f1711521c20e58053e958339d51db2b7a1222d8"
+      },
+      "attempt_id": "2a22e64d73ff4fc6826545dd436ae518",
+      "configuration_sha256": "f4413f27f9140940e1bd1d0b0c7b5dd127c15caf2eaa4a74ad55bf48d090e095",
+      "context_sha256": "c7b48ffb5149b5050a7c3e3377329ebefe477cd8b43ae014aa7e5d4a37c86899",
+      "provider": "codex_v1",
+      "scientific_sha256": "a075bf77f67ae31915f51b09e3d8e938f264e5effb82ee7621167a1cb8d5b6e5",
+      "status": "protocol_invalid"
+    },
+    {
+      "admitted": false,
+      "artifacts_sha256": {
+        "metadata": "e8e654b333f02f76c32f0f75e87593ac75714a06ca66d816e61105f8cba58a89",
+        "receipt": "ab69e208380f778c2d26b7adbda7bca9ab60d01d66fe833d4eeec9299f3e9997",
+        "reservation": "308a5b0b3bf22335d618d656eb2e96e3a42650fcb4d1c965b274d9d9c8a066b9",
+        "sidecar": "67db25e9dbc3f0c51017bb0f0e17aa78a2bfd9c8679d3a7fa7dadabf7d43b7d7",
+        "stderr": "2e868483a21e3715a1488965c1a188d34a6bef20be2440f175798e76841ea942",
+        "stdout": "93730d24475d4048cfc0aba0413d58baf16bf693e0123f6c7eb74f8f57efad9a",
+        "terminal": "96acd6d531ba006d1c2f4e3e3f1711521c20e58053e958339d51db2b7a1222d8"
+      },
+      "attempt_id": "5f300311400440739acbd82b78e33478",
+      "configuration_sha256": "bc164fdafcd69c1dcfe8d8f34a5e3c9d8a7dbe54ea547cda1b11880331e0d747",
+      "context_sha256": "fff71495978055834434265c44f9a5c736b987598bbcc8d53012b8bff664c3ed",
+      "provider": "codex_v1",
+      "scientific_sha256": "a5301b34f40510dd1ba3853b5647c05243077e88e91c9c09335abdc25cbdc4ec",
+      "status": "operational_unknown"
+    }
+  ],
+  "provider": "codex_v1",
+  "schema_version": 1
+}

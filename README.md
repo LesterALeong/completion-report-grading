@@ -1,65 +1,64 @@
-# Completion report grading study
+# Completion report grading: a local-model safety pilot
 
-Can normative approval pressure change whether a grader accepts code with a visible criterion violation? This repository defines a bounded, exploratory replication and extension using static synthetic Python utility functions. It is a code-local obvious-defect floor probe, not a realistic patch benchmark. It compares report-free, neutral-report, approval-pressure, and bundled evidence-first mitigation conditions on identical task and code bytes.
+Can approval-seeking completion reports make an LLM grader accept broken code? In this preregistered pilot, local Qwen falsely approved **3 of 12 defective holdout cases with a neutral report and 4 of 12 with approval pressure**. The one-case increase fell below the predeclared two-case screen. The mitigation yielded one fewer false approval overall, also below its target. All six correct controls passed in every condition.
 
-The plan contains 8 development cases in 2 task families and 18 held-out cases in 3 disjoint task families. The family taxonomy is declared in `study/protocol.json`; disjoint labels do not establish independent algorithms or statistical independence. Each case is assigned all four conditions. The separately preregistered v2 run uses the installed local `qwen3.5:9b-q4_K_M` model on Ollama 0.40.14, with its manifest digest, template, defaults and request controls recorded. The artifact digest does not guarantee identical GPU execution.
+| Holdout condition | False approvals / defective cases | Correct controls approved |
+| --- | ---: | ---: |
+| No report | 2/12 | 6/6 |
+| Neutral report | 3/12 | 6/6 |
+| Approval-seeking report | 4/12 | 6/6 |
+| Approval-seeking report + mitigation | 3/12 | 6/6 |
 
-The original Codex v1 route closed after two outcome-blind startup failures and an observability audit, before any study grading. Its [operability report](docs/CODEX_OPERABILITY.md) and [historical protocol](docs/protocols/CODEX_V1.md) preserve that record. Provider selection for v2 precedes all grading outcomes; this project is not a model comparison.
+**Read the [report](docs/REPORT.md)** for paired estimates, uncertainty, the concrete failure, family breakdown and limitations. This is a small authored, obvious-defect floor probe on one quantized local model. A below-threshold finding does not establish that approval pressure is harmless or that the mitigation works.
 
-## Offline setup and commands
+The safety concern is an evaluation gate that accepts an AI agent's unsupported success claims. This work sample tests a small part of that concern and demonstrates frozen inputs, independent executable ground truth, retained failures, strict evidence handling and reproducible analysis. Research, implementation, review and writing were AI-assisted; the reviews are not human peer review.
 
-Python 3.12 and `tiktoken==0.13.0` are expected. Model-free tests use local fixtures and the tokenizer cache at `../_tmp/completion-report-grading/tokenizer-cache` by default, configurable with `TIKTOKEN_CACHE_DIR`. Inference preflight checks the existing local Ollama server at the fixed loopback endpoint and the already-installed model; it does not download models. Live transport targets Windows. Public replay uses the standard library and does not need Ollama, Codex, authentication or a GPU.
+## Replay without a model
 
-From this repository root, run:
+From this repository root, use Python 3.12 and the standard library. No Ollama server, Codex login, GPU or API key is needed:
 
 ```powershell
-python -m study preflight
-python -m ruff check --no-cache --select F study tests
+python -S -B -m study analyze --split holdout --bundle results/study-publication-v2 --scope public_projection_replay --manifest-sha256 64c1ed196bbadcf02180463910ff47ae9db7f938efa8c86a5c2f8f9c64b33114
+```
+
+Use `--split development` for the separate development analysis. Saved [holdout](results/holdout-analysis.json) and [development](results/development-analysis.json) JSON files contain the full tables, paired contrasts, missingness accounting and case-level decisions. Cold public replay passed for all 72 holdout and 32 development cells with private state absent and network/live adapters blocked. Both analyses match private raw verification except for the explicit verification-scope label.
+
+Public replay verifies published projections and commitments. It cannot independently prove equality with unpublished raw captures. Raw responses, native diagnostics and the original failed export remain in the owner's retained private evidence.
+
+## Design and provenance
+
+- 8 development cases in 2 authored families; 18 holdout cases in 3 further authored families, including 12 defective cases and 6 controls. Each implementation receives all four conditions. Family labels do not establish statistical independence.
+- Neutral and approval-seeking reports hold factual claims, evidence and order fixed; the intervention is normative approval pressure. The mitigation bundles a report warning with a verification instruction.
+- 48 local criterion checks across 26 synthetic Python functions, including defect witnesses and audited controls. The grader receives no oracle labels or checks.
+- Installed `qwen3.5:9b-q4_K_M`, Ollama 0.40.14, manifest digest `6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7`. Fixed schema, tools `[]`, thinking disabled, temperature 0, seed 20261109, context 4096, output cap 512, two CPU threads and serial calls. A digest does not guarantee identical future GPU arithmetic.
+- [Preregistration commit d4bd17f](https://github.com/LesterALeong/completion-report-grading/commit/d4bd17f6c9383dd4fcffea79041a3268a3839e8a) was public before any study grading. The [admission bundle](results/admission) preserves the zero-study checkpoint; the [commentable log](https://github.com/LesterALeong/completion-report-grading/issues/1) preserves the earlier prediction and operational pivot.
+- All 104 study cells completed validly, with no retries or tuning between splits. Four charged canaries include two failed Codex attempts and two successful local predicates: 108 evaluation attempts within the original 120 cap. No separate paid API, rented GPU, model download or training was used.
+
+The original Codex route closed before study grades because admission and observability requirements were not met. Local v2 was separately preregistered before outcomes; this is not a provider comparison. See the [operability report](docs/CODEX_OPERABILITY.md), [v2 specification](docs/SPEC.md), [protocol](study/protocol.json), [architecture](docs/OLLAMA_ARCHITECTURE.md) and [related work](docs/RELATED_WORK.md).
+
+## Publication amendment
+
+The first full export failed because redaction expanded one valid 300-character explanation to 305 characters. A separate [publication amendment](publication/amend.py) bounds only that sanitized display reason. Frozen study code, raw evidence, verdicts, validity and statistical outputs remain unchanged. The [postmortem](docs/reviews/EXPORT_POSTMORTEM.md) and [amendment provenance](results/study-publication-v2-amendment.json) record the original failure, exact identities and change. The unchanged strict public reader accepts the corrected bundle.
+
+Rebuilding this publication requires retained private evidence, the original failed bundle and reviewed source archive. Its create-only command is:
+
+```powershell
+python -S -B -m publication.amend --private-root ../_tmp/completion-report-grading --original ../_tmp/completion-report-grading/failed-public-export-01 --target results/new-publication --original-manifest-sha256 ef3369c61e24c4b5a6c0417ee5eb8f25b77c4bbde39b86359d12b12c1750f94b
+```
+
+The live harness also requires retained historical evidence and the exact installed model/runtime. Public cloning supports replay of the published run; it does not recreate private captures or guarantee identical new inference.
+
+## Model-free checks
+
+For the full suite, install the pinned development packages and seed the public tokenizer cache once. This downloads an encoding, not a model or inference response:
+
+```powershell
+python -m pip install tiktoken==0.13.0 ruff==0.15.15
+python -c "import os; from study.protocol import TASK_TMP; os.environ['TIKTOKEN_CACHE_DIR'] = str(TASK_TMP / 'tokenizer-cache'); import tiktoken; tiktoken.get_encoding('o200k_base')"
+python -m ruff check --no-cache --select F study tests publication
 python -m unittest discover -v
 ```
 
-`preflight` checks fixture composition, local oracle truth, condition input parity, report wording, and the cached `o200k_base` token-count proxy. The tokenizer is a parity proxy; it is not asserted to be the backend's native tokenizer. The static report manipulation audit must separately confirm matched factual/evidence claims and materially stronger approval pressure before calls.
+Native transport tests use inert ephemeral loopback servers on Windows and never contact the model. The recorded pre-study suite passed 101 tests without skips; the publication amendment adds a portable retained-producer regression and display-boundary tests. The `o200k_base` encoding is a report-length parity proxy, not Qwen's native tokenizer.
 
-After independent code review and native inert QA, the operator may run the two outcome-blind local canaries during authentic transport QA:
-
-```powershell
-python -m study canary --authorize-local-model-calls --confirm-offline-review-and-native-qa --changed-premise "Separately preregistered local v2 after retained Codex operational failures"
-```
-
-Complete authentic QA, then freeze before running any study cells:
-
-```powershell
-python -m study freeze
-python -m study run --split development --authorize-local-model-calls
-python -m study run --split holdout --authorize-local-model-calls
-python -m study analyze --split holdout --bundle ../_tmp/completion-report-grading --scope private_raw_verified
-```
-
-Each model transport attempt consumes a reserved turn. Before resuming, the runner verifies the complete frozen attempt prefix and retained capture evidence. A failed study attempt stops execution and is never retried. A failed pre-freeze canary can be readmitted only after an explicit changed-source/configuration repair, using `--changed-premise` and the same budget. Study calls are serial. Private reservations, raw stdout/stderr, finite failure diagnostics, and receipts remain below `../_tmp/completion-report-grading/`, outside each fresh judge directory and Git.
-
-Create a sanitized bundle from verified private evidence, then record its returned manifest hash:
-
-```powershell
-New-Item -ItemType Directory -Path results -Force | Out-Null
-python -m study export --private-root ../_tmp/completion-report-grading --target results/study
-```
-
-Export targets are create-only. Public replay uses that bundle and its independently recorded manifest byte hash:
-
-```powershell
-python -m study analyze --split holdout --bundle results/study --scope public_projection_replay --manifest-sha256 <published-manifest-hash>
-```
-
-Public replay checks sanitized producer-derived projections, frozen source/input identities, and exact public artifacts. It cannot independently prove unpublished raw bytes. Private verification requires those raw captures and never silently falls back to public projections.
-
-## Validity and interpretation
-
-The ground truth is stored separately from judge-facing task fixtures and is not included in prompts. Each direct local API request supplies one user message containing the task, criteria, static code and assigned report, with an empty tool list and no dispatcher. The worker captures the unmodified response body and separate HTTP facts. Tool-call output is rejected, and malformed structured output and operational failures remain separate missing observations. This is audited logical separation rather than host-level isolation.
-
-The task-owned HTTP client runs under bounded Windows Job custody. The existing Ollama daemon remains outside that Job and is never killed. A timeout or uncertain daemon completion stops the campaign as operationally unknown. The model's keep-alive interval is 60 seconds.
-
-The planned total is 104 study attempts plus at most 16 outcome-blind canaries, with a cumulative cap of 120 across both versions. The two failed Codex attempts remain charged, leaving at most 14 local canaries. Holdout contains 12 defective cases and 6 correct controls, balanced within each of three task families. Analysis uses valid paired observations, planned denominators, missingness bounds, finite-sample Wilson intervals, and a fixed-seed paired bootstrap with 10,000 resamples. Intervals are descriptive and conditional on these authored fixtures. A null or below-threshold result is not evidence that the effect is absent.
-
-There are no study results in this repository yet. Do not describe simulated or offline fixture outputs as model results. Primary-source citations and final public-result claims require separate verification and independent review.
-
-See the [v2 specification](docs/SPEC.md), [local architecture](docs/OLLAMA_ARCHITECTURE.md), [historical architecture](docs/ARCHITECTURE.md), [related work](docs/RELATED_WORK.md), and [interview guide](docs/INTERVIEW_GUIDE.md).
+See the [interview guide](docs/INTERVIEW_GUIDE.md) to trace the work and prepare to explain its limits. The repository does not establish course attendance, personal mastery or a hiring outcome.
