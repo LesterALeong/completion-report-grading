@@ -1,0 +1,17 @@
+{
+  "files_sha256": {
+    "content.json": "69eb53bc149cec3c6849fc30813d4f01595aa9fd9c6a38fd7cea0c6af07cf4c0",
+    "render_explainer.py": "b04707eb9767e1e39722dbaaed228c672d42e292717a9503481f16dd6e99befb",
+    "explainer.mp4": "9f5693e2b1e189ffca6faa1130d86175e2d740ef416dee9d505058322d7f1dcd",
+    "captions.vtt": "ffa33a83db6dcdad3329cfd7e6ba3f0c548687a015b1b51de4511a80ac1e4c73",
+    "poster.jpg": "af0eb068ab0599087e40c3c32bd054f787a7ca7dd47fa3a0fdb2e0f15192baf4",
+    "media-data.js": "cfd053bd8d64e1305af5de55bc8900ef4be94d55b22994560960239f24e5f2a2",
+    "transcript.html": "f48d71659413d4cab51e0c24c00b9517de8ca72f9f036e4cf6ecb4a04c18a1be",
+    "../REPORT.md": "2563dfefb286ab536b45b86535f1e0ad1ff09c06dfa41c64ab33f295f6e4c483",
+    "../INTERVIEW_GUIDE.md": "ab40cef11da81d609fe5a56a495c869838ada1e40937a705439a94e66dccef54",
+    "../../README.md": "4187dd6ad171adc1df5192d6fd422baa6eeb5208f71691a58ffa701afc6de6e1"
+  },
+  "duration_seconds": 474.091,
+  "python_version": "3.12.10",
+  "ffmpeg_version": "ffmpeg version 8.1-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers"
+}

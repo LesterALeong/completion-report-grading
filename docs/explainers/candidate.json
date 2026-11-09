@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "base_commit": "43cda33b745cedcb223d9ecf8b7952455d3f4a99",
+  "files_sha256": {
+    "docs/explainers/ARCHITECTURE.md": "1ad052d1e4140f1042b06c5d7382b6f3fd93e52c4179e8714b2cdc0d9bd649b1",
+    "docs/explainers/build-manifest.json": "f91b6b9cb2858cf2033415fd9e9177f43660db086635c7108bdd00ba4adbaec2",
+    "docs/explainers/captions.vtt": "ffa33a83db6dcdad3329cfd7e6ba3f0c548687a015b1b51de4511a80ac1e4c73",
+    "docs/explainers/content.json": "69eb53bc149cec3c6849fc30813d4f01595aa9fd9c6a38fd7cea0c6af07cf4c0",
+    "docs/explainers/explainer.mp4": "9f5693e2b1e189ffca6faa1130d86175e2d740ef416dee9d505058322d7f1dcd",
+    "docs/explainers/index.html": "a1ce57269dcf6c64581de7617777311a26bffb0ea67f65dfeadb219eb9cffe90",
+    "docs/explainers/media-data.js": "cfd053bd8d64e1305af5de55bc8900ef4be94d55b22994560960239f24e5f2a2",
+    "docs/explainers/poster.jpg": "af0eb068ab0599087e40c3c32bd054f787a7ca7dd47fa3a0fdb2e0f15192baf4",
+    "docs/explainers/render_explainer.py": "b04707eb9767e1e39722dbaaed228c672d42e292717a9503481f16dd6e99befb",
+    "docs/explainers/SPEC.md": "effc79828c6b62dd72ce5d6783743ec68ea9c3d25d9e9bee5e1d9996e1647b3a",
+    "docs/explainers/transcript.html": "f48d71659413d4cab51e0c24c00b9517de8ca72f9f036e4cf6ecb4a04c18a1be"
+  },
+  "protected_tracked_files": 427,
+  "protected_check": "git diff HEAD: only tasks/todo.md changed; additive explainer bundle is untracked at freeze",
+  "acceptance_matrix": "docs/explainers/SPEC.md section 4",
+  "browser_evidence": "Root CUA: local file loaded in Chrome; network Go offline then reload; editable H16 7/9, duplicate and distinct-key states; actual video playback at 0:08 and 0:13; burned captions visible; English selectable caption choice available. 16 chapter buttons and full transcript verified. 960px layout inspected. Offline emulation restored afterward. No global networking or other tabs changed.",
+  "audio_scope": "H264/AAC probe and loudness mean -16.8 dB / peak -0.1 dB; no human listening audit claimed",
+  "caption_scope": "Burned captions plus VTT and inline VTTCue fallback. Within-line timing is proportional, not word-perfect. No embedded MP4 subtitle stream."
+}

@@ -40,3 +40,17 @@ The core result commit 32f837754a4470e8a1e34cf3b6c9bbbb6246c08c was pushed and m
 Course-facing summary, reflection and public draft links were saved and read back. Personal calendar commitments, facilitated participation and credentials remain user-owned and are not asserted by this technical release. The current interface limits formal feedback submission to facilitated cohorts. No social posts or membership purchases were made.
 
 Cleanup census found zero task-owned transport clients, the user's pre-existing Ollama daemon still running, and only the primary worktree. No extra worktree or local branch required deletion. Private raw evidence, the failed export and source archives are intentionally retained outside Git with a retention note. The next useful step is owner review of H16 and the primary-versus-secondary comparison; any further empirical work needs a separate preregistration.
+
+## Companion explainers
+
+- [x] Specify narrated video and standalone browser companion against the original report.
+- [x] Approve architecture, local speech/render tools and content interfaces.
+- [x] Write original startup-comedy narration from the recorded facts.
+- [x] Complete the plain-English interactive browser guide.
+- [x] Render playable MP4, synchronized captions, transcript and poster.
+- [x] Review factual fidelity and implementation; QA audio/video and Chrome interactions.
+- [x] Open the companion in Chrome; push the completed source/media to the existing public repository and verify Git parity.
+
+### Companion review
+
+The standalone guide and 7:54.091 H.264/AAC film are bound to explainer candidate `86abbf3395354dae72e73a34c9a2d76acfa6875ff511d0798365e8e78c26a4ae`. The successor resolved the review batch, received APPROVED and final QA SHIP IT, and passed the configured Ruff checks, all 105 model-free tests, 72/72 saved holdout replay, source/media hashes and forced renderer failure checks. Chrome local-file playback, offline reload, chapter jumps, transcript, responsive layout, keyboard input/Tab/Space, accessible labels and H16 outcomes were observed. Caption timing within each line is approximate; no human listening or audible screen-reader audit is claimed. The frozen scientific and publication closure remains unchanged. Only the new companion bundle and this task record are included in this release.
