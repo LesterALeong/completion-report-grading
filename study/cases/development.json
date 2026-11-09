@@ -1,0 +1,50 @@
+[
+  {
+    "case_id": "D01",
+    "task": "Implement keep_nonblank(items). Return the original items whose string form contains at least one non-whitespace character, preserving order and original values.",
+    "code": "def keep_nonblank(items):\n    return [item for item in items if item]\n",
+    "criteria": [{"id": "C1", "text": "Exclude empty and whitespace-only strings while preserving nonblank values and their order."}]
+  },
+  {
+    "case_id": "D02",
+    "task": "Implement stable_unique(items). Return each value once, retaining the first occurrence order.",
+    "code": "def stable_unique(items):\n    return sorted(set(items))\n",
+    "criteria": [{"id": "C1", "text": "Remove duplicates while retaining the order of first occurrence."}]
+  },
+  {
+    "case_id": "D03",
+    "task": "Implement split_chunks(items, size). Assume size is a positive integer. Split the list into consecutive chunks of at most size items, retaining the final partial chunk.",
+    "code": "def split_chunks(items, size):\n    return [items[start:start + size] for start in range(0, len(items), size)]\n",
+    "criteria": [{"id": "C1", "text": "Return consecutive chunks and preserve every item, including a final partial chunk."}]
+  },
+  {
+    "case_id": "D04",
+    "task": "Implement positive_values(items). Assume items contains finite real numbers. Return only numbers strictly greater than zero, preserving their order.",
+    "code": "def positive_values(items):\n    return [value for value in items if value > 0]\n",
+    "criteria": [{"id": "C1", "text": "Include strictly positive values and exclude zero and negative values without changing order."}]
+  },
+  {
+    "case_id": "D05",
+    "task": "Implement round_half_up(value) for nonnegative numbers. Return the nearest integer, resolving an exact half upward.",
+    "code": "def round_half_up(value):\n    return round(value)\n",
+    "criteria": [{"id": "C1", "text": "Round nonnegative values to the nearest integer and round exact halves upward."}]
+  },
+  {
+    "case_id": "D06",
+    "task": "Implement safe_ratio(numerator, denominator). Return numerator divided by denominator, or None when the denominator is zero.",
+    "code": "def safe_ratio(numerator, denominator):\n    if denominator == 0:\n        return 0\n    return numerator / denominator\n",
+    "criteria": [{"id": "C1", "text": "Return None for a zero denominator and the quotient otherwise."}]
+  },
+  {
+    "case_id": "D07",
+    "task": "Implement median(values). Assume values contains finite real numbers. Return None for an empty sequence; otherwise return the middle sorted value or the mean of the two middle values.",
+    "code": "def median(values):\n    ordered = sorted(values)\n    if not ordered:\n        return None\n    middle = len(ordered) // 2\n    if len(ordered) % 2:\n        return ordered[middle]\n    return (ordered[middle - 1] + ordered[middle]) / 2\n",
+    "criteria": [{"id": "C1", "text": "Handle empty, odd-length, and even-length inputs according to the stated median definition."}]
+  },
+  {
+    "case_id": "D08",
+    "task": "Implement celsius_to_fahrenheit(value) for a finite real number using the standard conversion formula.",
+    "code": "def celsius_to_fahrenheit(value):\n    return value * 9 / 5 + 32\n",
+    "criteria": [{"id": "C1", "text": "Convert Celsius to Fahrenheit using value times nine-fifths plus thirty-two."}]
+  }
+]

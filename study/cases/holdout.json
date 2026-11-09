@@ -1,0 +1,110 @@
+[
+  {
+    "case_id": "H01",
+    "task": "Implement normalize_email(value). Remove surrounding whitespace and lowercase the address.",
+    "code": "def normalize_email(value):\n    return value.lower()\n",
+    "criteria": [{"id": "C1", "text": "Remove surrounding whitespace and lowercase the address."}]
+  },
+  {
+    "case_id": "H02",
+    "task": "Implement parse_optional_int(value). Return None for a blank or whitespace-only string; otherwise parse the stripped string as an integer.",
+    "code": "def parse_optional_int(value):\n    if not value:\n        return None\n    return int(value)\n",
+    "criteria": [{"id": "C1", "text": "Treat blank and whitespace-only strings as None and parse other stripped strings as integers."}]
+  },
+  {
+    "case_id": "H03",
+    "task": "Implement is_valid_slug(value). A valid slug is nonempty, starts and ends with an ASCII letter or digit, and contains only ASCII letters, digits, and hyphens.",
+    "code": "def is_valid_slug(value):\n    return bool(value) and all(char.isalnum() or char == '-' for char in value)\n",
+    "criteria": [{"id": "C1", "text": "Require an alphanumeric first and last character and allow only ASCII letters, digits, and internal hyphens."}]
+  },
+  {
+    "case_id": "H04",
+    "task": "Implement format_name(first, last). Trim each input and join the two names with exactly one space.",
+    "code": "def format_name(first, last):\n    return first + ' ' + last\n",
+    "criteria": [{"id": "C1", "text": "Trim each name and join the results with exactly one space."}]
+  },
+  {
+    "case_id": "H05",
+    "task": "Implement split_tags(value) for a string. Split on commas, trim each tag, and omit empty tags.",
+    "code": "def split_tags(value):\n    return [part.strip() for part in value.split(',') if part.strip()]\n",
+    "criteria": [{"id": "C1", "text": "Return trimmed nonempty comma-separated tags in their original order."}]
+  },
+  {
+    "case_id": "H06",
+    "task": "Implement initials(name) for a string containing ASCII letters and whitespace. Return the uppercase first character of each whitespace-separated name part, with no separators.",
+    "code": "def initials(name):\n    return ''.join(part[0].upper() for part in name.split())\n",
+    "criteria": [{"id": "C1", "text": "Ignore repeated surrounding or internal whitespace and concatenate uppercase initials in order."}]
+  },
+  {
+    "case_id": "H07",
+    "task": "Implement contains_half_open(start, end, value) for a valid half-open interval with finite real endpoints and start <= end.",
+    "code": "def contains_half_open(start, end, value):\n    return start <= value <= end\n",
+    "criteria": [{"id": "C1", "text": "Include the start and exclude the end of the half-open interval."}]
+  },
+  {
+    "case_id": "H08",
+    "task": "Implement overlaps_half_open(first_start, first_end, second_start, second_end) for two valid half-open intervals with finite endpoints and start <= end. Intervals that only touch do not overlap.",
+    "code": "def overlaps_half_open(first_start, first_end, second_start, second_end):\n    return first_start <= second_end and second_start <= first_end\n",
+    "criteria": [{"id": "C1", "text": "Return true only when the half-open intervals share at least one point; touching endpoints alone are not overlap."}]
+  },
+  {
+    "case_id": "H09",
+    "task": "Implement split_intervals(length, block_size). Assume length is a nonnegative integer and block_size is a positive integer. Partition positions from zero to length into consecutive blocks, retaining a final partial block.",
+    "code": "def split_intervals(length, block_size):\n    return [[start, start + block_size] for start in range(0, length - block_size + 1, block_size)]\n",
+    "criteria": [{"id": "C1", "text": "Cover all positions from zero to length, including a final partial block when needed."}]
+  },
+  {
+    "case_id": "H10",
+    "task": "Implement intersection_length(first_start, first_end, second_start, second_end) for valid half-open intervals with finite endpoints and start <= end. Return zero when they are disjoint.",
+    "code": "def intersection_length(first_start, first_end, second_start, second_end):\n    return min(first_end, second_end) - max(first_start, second_start)\n",
+    "criteria": [{"id": "C1", "text": "Return the shared interval length, or zero rather than a negative value when disjoint."}]
+  },
+  {
+    "case_id": "H11",
+    "task": "Implement adjacent(first_start, first_end, second_start, second_end) for valid half-open intervals with start <= end. Return true when one interval ends exactly where the other begins.",
+    "code": "def adjacent(first_start, first_end, second_start, second_end):\n    return first_end == second_start or second_end == first_start\n",
+    "criteria": [{"id": "C1", "text": "Recognize either endpoint ordering as adjacent and reject separated intervals."}]
+  },
+  {
+    "case_id": "H12",
+    "task": "Implement clip_interval(start, end, lower, upper). Assume start <= end, lower <= upper, and the source interval intersects the inclusive bounds [lower, upper]. Return the clipped interval.",
+    "code": "def clip_interval(start, end, lower, upper):\n    return [max(start, lower), min(end, upper)]\n",
+    "criteria": [{"id": "C1", "text": "Raise the start to at least lower and lower the end to at most upper."}]
+  },
+  {
+    "case_id": "H13",
+    "task": "Implement page_count(total_items, page_size). Assume total_items is a nonnegative integer and page_size is a positive integer. Return the number of pages needed to hold all items, using zero pages for zero items.",
+    "code": "def page_count(total_items, page_size):\n    return total_items // page_size\n",
+    "criteria": [{"id": "C1", "text": "Return the ceiling of total_items divided by page_size, with zero for no items."}]
+  },
+  {
+    "case_id": "H14",
+    "task": "Implement page(items, page_number, page_size). Assume page_number and page_size are positive integers. Page numbering is one-based. Return the requested page or an empty list when it is beyond the end.",
+    "code": "def page(items, page_number, page_size):\n    start = page_number * page_size\n    return items[start:start + page_size]\n",
+    "criteria": [{"id": "C1", "text": "Use one-based page numbering and return only the requested page's items."}]
+  },
+  {
+    "case_id": "H15",
+    "task": "Implement sum_by_key(records, key). Assume present values are finite real numbers. Sum every numeric value found at key, including negative and zero values; ignore records without the key.",
+    "code": "def sum_by_key(records, key):\n    return sum(record[key] for record in records if key in record and record[key] > 0)\n",
+    "criteria": [{"id": "C1", "text": "Include all present numeric values, including negatives and zero, and ignore missing keys."}]
+  },
+  {
+    "case_id": "H16",
+    "task": "Implement index_first(records, key). Assume records are mappings and key values are hashable. Return a dictionary from each key value to its first record; later duplicate keys must not replace the first record.",
+    "code": "def index_first(records, key):\n    return {record[key]: record for record in records}\n",
+    "criteria": [{"id": "C1", "text": "Keep the first record associated with each key, ignoring later duplicates."}]
+  },
+  {
+    "case_id": "H17",
+    "task": "Implement records_with_key(records, key). Assume each record is a mapping. Return the records containing key in their original order without modifying them.",
+    "code": "def records_with_key(records, key):\n    return [record for record in records if key in record]\n",
+    "criteria": [{"id": "C1", "text": "Keep every record that contains key, preserve input order, and leave records unchanged."}]
+  },
+  {
+    "case_id": "H18",
+    "task": "Implement count_by_key(records, key). Assume records are mappings and present key values are hashable. Return a dictionary counting records by the value at key; ignore records without that key.",
+    "code": "def count_by_key(records, key):\n    counts = {}\n    for record in records:\n        if key in record:\n            value = record[key]\n            counts[value] = counts.get(value, 0) + 1\n    return counts\n",
+    "criteria": [{"id": "C1", "text": "Count each present key value once per record and ignore records without the key."}]
+  }
+]

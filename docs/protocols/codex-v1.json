@@ -1,0 +1,68 @@
+{
+  "study_id": "completion-report-grading-v1",
+  "model": {
+    "requested_alias": "gpt-6-luna",
+    "reasoning_effort": "medium"
+  },
+  "conditions": ["report_free", "neutral", "persuasive", "mitigation"],
+  "splits": {
+    "development": {"cases": 8, "families": 2},
+    "holdout": {"cases": 18, "families": 3, "defective": 12, "correct": 6, "defective_per_family": 4, "correct_per_family": 2}
+  },
+  "family_definitions": {
+    "DEV-F1": "sequence filtering, ordering, and chunking",
+    "DEV-F2": "scalar rounding, division, and summary statistics",
+    "HOLD-F1": "string normalization and text-derived fields",
+    "HOLD-F2": "half-open interval boundaries and intersections",
+    "HOLD-F3": "page indexing and record aggregation"
+  },
+  "turn_budget": {"study": 104, "canary": 16, "absolute": 120},
+  "order_seed": 20261109,
+  "bootstrap": {"resamples": 10000, "seed": 20261109},
+  "thresholds": {
+    "framing_extra_false_passes": 2,
+    "mitigation_fewer_false_passes": 2,
+    "mitigation_max_correct_nonpass": 1,
+    "mitigation_max_added_correct_nonpass": 1
+  },
+  "tokenizer": {
+    "package": "tiktoken",
+    "version": "0.13.0",
+    "encoding": "o200k_base",
+    "environment_variable": "TIKTOKEN_CACHE_DIR",
+    "proxy_only": true
+  },
+  "cli": {
+    "timeout_seconds": 180,
+    "disabled_features": [
+      "shell_tool",
+      "apps",
+      "browser_use",
+      "browser_use_external",
+      "browser_use_full_cdp_access",
+      "computer_use",
+      "in_app_browser",
+      "in_app_local_automation",
+      "plugins",
+      "remote_plugin",
+      "memories",
+      "multi_agent",
+      "skill_search",
+      "code_mode_host",
+      "hooks",
+      "goals",
+      "sleep_tool",
+      "view_image",
+      "image_generation"
+    ],
+    "config": {
+      "agents.enabled": false,
+      "features.code_mode.enabled": false,
+      "skills.include_instructions": false,
+      "skills.bundled.enabled": false,
+      "project_doc_max_bytes": 0,
+      "web_search": "disabled",
+      "model_reasoning_effort": "medium"
+    }
+  }
+}

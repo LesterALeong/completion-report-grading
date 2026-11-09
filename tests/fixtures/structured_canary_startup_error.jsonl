@@ -1,0 +1,5 @@
+{"type":"thread.started"}
+{"item":{"id":"item-1","type":"error"},"type":"item.completed"}
+{"type":"turn.started"}
+{"item":{"id":"item-2","text":"{\"reason\":\"structured response available\",\"verdict\":\"PASS\"}","type":"agent_message"},"type":"item.completed"}
+{"type":"turn.completed"}

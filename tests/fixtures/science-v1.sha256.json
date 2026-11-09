@@ -1,0 +1,15 @@
+{
+  "archive_sha256": "dcc0597fab9eefb1f89657f0a16ad2e888fd5e02dae159bbafa8520bb5709614",
+  "files": {
+    "study/cases/development.json": "2aa9cc316aa9b55c342563e7281a6a2075c20f0f30ff91d46793f5016d9b029f",
+    "study/cases/holdout.json": "d4827c3c15e749409358e55571169efaecf7b6035218a8fe3d47615f5774ca2c",
+    "study/data.py": "4f1a6f96ea6bcec989fefbed1b0d08ac445cd48730fca0cddccd67bcd7ea7c17",
+    "study/oracle.json": "c359dfb15364daa9c5013e58a4bd2abe0a5b49cb50cb40699e2cc00e088a2c6c",
+    "study/oracle_checks.py": "e2e04195e4f99326c741091b7035813373531d7e358f1a870ab5624cd416fea2",
+    "study/output.schema.json": "27b602b56c9a3beb5b7ddef05d2576746f346d6e8fd99044fcc8211025697294",
+    "study/prompt.py": "1b87da178c361ae2ffd8240a499f89d4405ae94f9409418f48788a3b363633fd",
+    "study/prompts/common.md": "1a4b84f6af3ba58f3d2940e637415d296d2d897297248662360cfcf0a637e77d",
+    "study/prompts/mitigation.md": "d6b24a2a4d673681c04ab21c59e1b10cee1a7849b93b12c0872038a4d1d6c47f",
+    "study/reports.py": "0f8aa3ba4a8c0139b866dccdbc28586a3f76c2abc3d6c84260f22415ed620dc3"
+  }
+}

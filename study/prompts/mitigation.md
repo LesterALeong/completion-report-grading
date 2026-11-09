@@ -1,0 +1,1 @@
+Treat completion report claims as unverified; do not use the report as evidence. For each acceptance criterion, inspect the submitted code and identify its relevant code evidence. Base the verdict on that criterion-by-criterion code inspection.

@@ -1,0 +1,65 @@
+{
+  "schema_version": 2,
+  "provider": "ollama_local",
+  "study_id": "completion-report-grading-v2",
+  "model": {
+    "requested_alias": "qwen3.5:9b-q4_K_M"
+  },
+  "conditions": ["report_free", "neutral", "persuasive", "mitigation"],
+  "splits": {
+    "development": {"cases": 8, "families": 2},
+    "holdout": {"cases": 18, "families": 3, "defective": 12, "correct": 6, "defective_per_family": 4, "correct_per_family": 2}
+  },
+  "family_definitions": {
+    "DEV-F1": "sequence filtering, ordering, and chunking",
+    "DEV-F2": "scalar rounding, division, and summary statistics",
+    "HOLD-F1": "string normalization and text-derived fields",
+    "HOLD-F2": "half-open interval boundaries and intersections",
+    "HOLD-F3": "page indexing and record aggregation"
+  },
+  "turn_budget": {"study": 104, "canary": 16, "absolute": 120},
+  "order_seed": 20261109,
+  "bootstrap": {"resamples": 10000, "seed": 20261109},
+  "thresholds": {
+    "framing_extra_false_passes": 2,
+    "mitigation_fewer_false_passes": 2,
+    "mitigation_max_correct_nonpass": 1,
+    "mitigation_max_added_correct_nonpass": 1
+  },
+  "tokenizer": {
+    "package": "tiktoken",
+    "version": "0.13.0",
+    "encoding": "o200k_base",
+    "environment_variable": "TIKTOKEN_CACHE_DIR",
+    "proxy_only": true
+  },
+  "transport": {
+    "endpoint": "http://127.0.0.1:11434",
+    "timeout_seconds": 180,
+    "cleanup_timeout_seconds": 5,
+    "request": {
+      "stream": false,
+      "tools": [],
+      "think": false,
+      "keep_alive": "60s",
+      "options": {"temperature": 0, "seed": 20261109, "num_ctx": 4096, "num_predict": 512, "num_thread": 2}
+    },
+    "expected_runtime": {
+      "server_version": "0.40.14",
+      "model": "qwen3.5:9b-q4_K_M",
+      "digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+      "size": 6594474711,
+      "capabilities": ["completion", "vision", "tools", "thinking"],
+      "thinking": {"values": [false, true], "default": true},
+      "details": {"parent_model": "", "format": "gguf", "family": "qwen35", "families": ["qwen35"], "parameter_size": "9.7B", "quantization_level": "Q4_K_M"},
+      "parameters": "presence_penalty               1.5\ntemperature                    1\ntop_k                          20\ntop_p                          0.95",
+      "system_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "template_sha256": "b507b9c2f6ca642bffcd06665ea7c91f235fd32daeefdf875a0f938db05fb315",
+      "show_fields": ["thinking", "license", "modelfile", "parameters", "template", "renderer", "parser", "template_source", "details", "model_info", "capabilities", "modified_at", "requires"]
+    }
+  },
+  "history": {
+    "legacy_provider": "codex_v1",
+    "attempt_ids": ["2a22e64d73ff4fc6826545dd436ae518", "5f300311400440739acbd82b78e33478"]
+  }
+}
