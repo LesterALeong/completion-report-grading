@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "scope": "development_only",
+  "case_count": 6,
+  "fixture_file_count": 12,
+  "fixture_paths": [
+    "cases/sequence_chunked_correct.py",
+    "cases/sequence_chunked_flawed.py",
+    "cases/sequence_unique_correct.py",
+    "cases/sequence_unique_flawed.py",
+    "cases/mapping_merge_counts_correct.py",
+    "cases/mapping_merge_counts_flawed.py",
+    "cases/text_word_count_correct.py",
+    "cases/text_word_count_flawed.py",
+    "cases/text_normalize_whitespace_correct.py",
+    "cases/text_normalize_whitespace_flawed.py",
+    "cases/numeric_positive_values_correct.py",
+    "cases/numeric_positive_values_flawed.py"
+  ],
+  "cases": [
+    {
+      "case_id": "sequence_chunked",
+      "family": "sequence",
+      "function_name": "chunked",
+      "parameters": ["values", "size"],
+      "requirement": "For a positive size, split a list of values into consecutive lists of that size, retaining a shorter final list when needed.",
+      "flaw_rationale": "The flawed version stops before a final incomplete chunk, so inputs whose length is not divisible by the chunk size lose values.",
+      "correct_path": "cases/sequence_chunked_correct.py",
+      "flawed_path": "cases/sequence_chunked_flawed.py",
+      "visible_examples": [
+        {"check_id": "chunked_even_length", "input": [[1, 2, 3, 4], 2], "expected": [[1, 2], [3, 4]]},
+        {"check_id": "chunked_multiple_groups", "input": [["a", "b", "c", "d", "e", "f"], 3], "expected": [["a", "b", "c"], ["d", "e", "f"]]}
+      ],
+      "contract_checks": [
+        {"check_id": "chunked_retains_remainder", "input": [["a", "b", "c", "d", "e"], 2], "expected": [["a", "b"], ["c", "d"], ["e"]], "witness": true},
+        {"check_id": "chunked_empty_sequence", "input": [[], 3], "expected": [], "witness": false}
+      ]
+    },
+    {
+      "case_id": "sequence_unique",
+      "family": "sequence",
+      "function_name": "unique_preserving_order",
+      "parameters": ["values"],
+      "requirement": "For a list of mutually orderable values, return each distinct value's first occurrence in input order.",
+      "flaw_rationale": "The flawed version sorts a set, which removes duplicates but changes the input order.",
+      "correct_path": "cases/sequence_unique_correct.py",
+      "flawed_path": "cases/sequence_unique_flawed.py",
+      "visible_examples": [
+        {"check_id": "unique_sorted_integers", "input": [[1, 1, 2, 2, 3]], "expected": [1, 2, 3]},
+        {"check_id": "unique_sorted_strings", "input": [["a", "a", "b", "b", "c"]], "expected": ["a", "b", "c"]}
+      ],
+      "contract_checks": [
+        {"check_id": "unique_preserves_first_seen_order", "input": [[3, 1, 3, 2]], "expected": [3, 1, 2], "witness": true},
+        {"check_id": "unique_keeps_first_text_order", "input": [["b", "a", "b"]], "expected": ["b", "a"], "witness": false}
+      ]
+    },
+    {
+      "case_id": "mapping_merge_counts",
+      "family": "mapping",
+      "function_name": "merge_counts",
+      "parameters": ["counts", "additions"],
+      "requirement": "Combine two string-to-integer count mappings by adding values for shared keys and keeping values for keys present in only one mapping.",
+      "flaw_rationale": "The flawed version uses the second mapping's value for shared keys instead of adding it to the first value.",
+      "correct_path": "cases/mapping_merge_counts_correct.py",
+      "flawed_path": "cases/mapping_merge_counts_flawed.py",
+      "visible_examples": [
+        {"check_id": "merge_counts_disjoint_fruit", "input": [{"apple": 2}, {"orange": 4}], "expected": {"apple": 2, "orange": 4}},
+        {"check_id": "merge_counts_disjoint_regions", "input": [{"north": 1}, {"south": 3}], "expected": {"north": 1, "south": 3}}
+      ],
+      "contract_checks": [
+        {"check_id": "merge_counts_adds_shared_key", "input": [{"apple": 2, "pear": 3}, {"apple": 4, "plum": 1}], "expected": {"apple": 6, "pear": 3, "plum": 1}, "witness": true},
+        {"check_id": "merge_counts_empty_base", "input": [{}, {"plum": 2}], "expected": {"plum": 2}, "witness": false}
+      ]
+    },
+    {
+      "case_id": "text_word_count",
+      "family": "text",
+      "function_name": "word_count",
+      "parameters": ["text"],
+      "requirement": "Count nonempty words separated by any whitespace, returning zero for empty or whitespace-only text.",
+      "flaw_rationale": "The flawed version counts literal spaces and adds one, so tabs, line breaks, repeated spaces, and empty input are counted incorrectly.",
+      "correct_path": "cases/text_word_count_correct.py",
+      "flawed_path": "cases/text_word_count_flawed.py",
+      "visible_examples": [
+        {"check_id": "word_count_two_words", "input": ["red blue"], "expected": 2},
+        {"check_id": "word_count_four_words", "input": ["one two three four"], "expected": 4}
+      ],
+      "contract_checks": [
+        {"check_id": "word_count_mixed_whitespace", "input": ["red\tblue\nmint"], "expected": 3, "witness": true},
+        {"check_id": "word_count_empty_text", "input": [""], "expected": 0, "witness": false}
+      ]
+    },
+    {
+      "case_id": "text_normalize_whitespace",
+      "family": "text",
+      "function_name": "normalize_whitespace",
+      "parameters": ["text"],
+      "requirement": "Replace every run of whitespace with one ASCII space and remove whitespace at both ends.",
+      "flaw_rationale": "The flawed version replaces one pair of spaces once; longer runs remain partially duplicated and tabs or line breaks are not normalized.",
+      "correct_path": "cases/text_normalize_whitespace_correct.py",
+      "flawed_path": "cases/text_normalize_whitespace_flawed.py",
+      "visible_examples": [
+        {"check_id": "normalize_outer_and_double_spaces", "input": ["  red  blue "], "expected": "red blue"},
+        {"check_id": "normalize_three_words", "input": ["a  b  c"], "expected": "a b c"}
+      ],
+      "contract_checks": [
+        {"check_id": "normalize_three_space_run", "input": ["a   b"], "expected": "a b", "witness": true},
+        {"check_id": "normalize_tabs_and_newlines", "input": ["red\tblue\n mint "], "expected": "red blue mint", "witness": false}
+      ]
+    },
+    {
+      "case_id": "numeric_positive_values",
+      "family": "numeric",
+      "function_name": "positive_values",
+      "parameters": ["values"],
+      "requirement": "For a list of numbers, return values strictly greater than zero while preserving their input order.",
+      "flaw_rationale": "The flawed version includes zero by testing for nonnegative values rather than positive values.",
+      "correct_path": "cases/numeric_positive_values_correct.py",
+      "flawed_path": "cases/numeric_positive_values_flawed.py",
+      "visible_examples": [
+        {"check_id": "positive_values_mixed", "input": [[3, -2, 5]], "expected": [3, 5]},
+        {"check_id": "positive_values_negative_and_positive", "input": [[-4, 1, 2]], "expected": [1, 2]}
+      ],
+      "contract_checks": [
+        {"check_id": "positive_values_excludes_zero", "input": [[0, -2]], "expected": [], "witness": true},
+        {"check_id": "positive_values_zero_between_values", "input": [[0, 3, -1]], "expected": [3], "witness": false}
+      ]
+    }
+  ]
+}

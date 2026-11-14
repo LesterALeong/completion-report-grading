@@ -1,0 +1,1243 @@
+{
+  "cases": [
+    {
+      "case_id": "sequence_chunked",
+      "checks_sha256": "21086db5a861ef357f876ef5bc6a187f3416629486c09d8f47aa099330aecdf1",
+      "criteria": {
+        "both_variants_pass_visible_examples": true,
+        "correct_variant_passes_contract_checks": true,
+        "flawed_variant_mismatches_intentional_witness": true,
+        "neither_variant_has_runtime_errors": true
+      },
+      "eligible": true,
+      "failed_criteria": [],
+      "family": "sequence",
+      "variants": {
+        "correct": {
+          "checks": [
+            {
+              "actual": [
+                [
+                  1,
+                  2
+                ],
+                [
+                  3,
+                  4
+                ]
+              ],
+              "check_id": "chunked_even_length",
+              "check_sha256": "837ff5b3501ebc818398b955e1f044b47389b9a9c44219a771d360b3c6bd463f",
+              "expected": [
+                [
+                  1,
+                  2
+                ],
+                [
+                  3,
+                  4
+                ]
+              ],
+              "input": [
+                [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                2
+              ],
+              "kind": "visible",
+              "status": "PASS",
+              "witness": false
+            },
+            {
+              "actual": [
+                [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                [
+                  "d",
+                  "e",
+                  "f"
+                ]
+              ],
+              "check_id": "chunked_multiple_groups",
+              "check_sha256": "64ca14b5cf60cbf783a0048b266536d3ac0c1c57602b00e9928b16fa62ab0eeb",
+              "expected": [
+                [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                [
+                  "d",
+                  "e",
+                  "f"
+                ]
+              ],
+              "input": [
+                [
+                  "a",
+                  "b",
+                  "c",
+                  "d",
+                  "e",
+                  "f"
+                ],
+                3
+              ],
+              "kind": "visible",
+              "status": "PASS",
+              "witness": false
+            },
+            {
+              "actual": [
+                [
+                  "a",
+                  "b"
+                ],
+                [
+                  "c",
+                  "d"
+                ],
+                [
+                  "e"
+                ]
+              ],
+              "check_id": "chunked_retains_remainder",
+              "check_sha256": "e127b12683ee653c3127044d14f9d6fbab0bc25b588bb7fbb1dd1b009208db15",
+              "expected": [
+                [
+                  "a",
+                  "b"
+                ],
+                [
+                  "c",
+                  "d"
+                ],
+                [
+                  "e"
+                ]
+              ],
+              "input": [
+                [
+                  "a",
+                  "b",
+                  "c",
+                  "d",
+                  "e"
+                ],
+                2
+              ],
+              "kind": "contract",
+              "status": "PASS",
+              "witness": true
+            },
+            {
+              "actual": [],
+              "check_id": "chunked_empty_sequence",
+              "check_sha256": "b3455554dd21dacd661771188967394143e14247fa09de8867b6c0a1dba8ad9f",
+              "expected": [],
+              "input": [
+                [],
+                3
+              ],
+              "kind": "contract",
+              "status": "PASS",
+              "witness": false
+            }
+          ],
+          "contract_checks_pass": true,
+          "intentional_witness_mismatch": false,
+          "runtime_error": false,
+          "source_path": "cases/sequence_chunked_correct.py",
+          "source_sha256": "7d56ed566e07b52632b15c52e1d72ef7b33216fb47eb91e0ccbb9229f0ecf09e",
+          "status": "PASS",
+          "visible_checks_pass": true
+        },
+        "flawed": {
+          "checks": [
+            {
+              "actual": [
+                [
+                  1,
+                  2
+                ],
+                [
+                  3,
+                  4
+                ]
+              ],
+              "check_id": "chunked_even_length",
+              "check_sha256": "837ff5b3501ebc818398b955e1f044b47389b9a9c44219a771d360b3c6bd463f",
+              "expected": [
+                [
+                  1,
+                  2
+                ],
+                [
+                  3,
+                  4
+                ]
+              ],
+              "input": [
+                [
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                2
+              ],
+              "kind": "visible",
+              "status": "PASS",
+              "witness": false
+            },
+            {
+              "actual": [
+                [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                [
+                  "d",
+                  "e",
+                  "f"
+                ]
+              ],
+              "check_id": "chunked_multiple_groups",
+              "check_sha256": "64ca14b5cf60cbf783a0048b266536d3ac0c1c57602b00e9928b16fa62ab0eeb",
+              "expected": [
+                [
+                  "a",
+                  "b",
+                  "c"
+                ],
+                [
+                  "d",
+                  "e",
+                  "f"
+                ]
+              ],
+              "input": [
+                [
+                  "a",
+                  "b",
+                  "c",
+                  "d",
+                  "e",
+                  "f"
+                ],
+                3
+              ],
+              "kind": "visible",
+              "status": "PASS",
+              "witness": false
+            },
+            {
+              "actual": [
+                [
+                  "a",
+                  "b"
+                ],
+                [
+                  "c",
+                  "d"
+                ]
+              ],
+              "check_id": "chunked_retains_remainder",
+              "check_sha256": "e127b12683ee653c3127044d14f9d6fbab0bc25b588bb7fbb1dd1b009208db15",
+              "expected": [
+                [
+                  "a",
+                  "b"
+                ],
+                [
+                  "c",
+                  "d"
+                ],
+                [
+                  "e"
+                ]
+              ],
+              "input": [
+                [
+                  "a",
+                  "b",
+                  "c",
+                  "d",
+                  "e"
+                ],
+                2
+              ],
+              "kind": "contract",
+              "status": "MISMATCH",
+              "witness": true
+            },
+            {
+              "actual": [],
+              "check_id": "chunked_empty_sequence",
+              "check_sha256": "b3455554dd21dacd661771188967394143e14247fa09de8867b6c0a1dba8ad9f",
+              "expected": [],
+              "input": [
+                [],
+                3
+              ],
+              "kind": "contract",
+              "status": "PASS",
+              "witness": false
+            }
+          ],
+          "contract_checks_pass": false,
+          "intentional_witness_mismatch": true,
+          "runtime_error": false,
+          "source_path": "cases/sequence_chunked_flawed.py",
+          "source_sha256": "1f2d81c8915e503873c4263fea64e647cdc9165df1d787f0ebb21d124582894d",
+          "status": "PASS_VISIBLE_WITH_CONTRACT_WITNESS",
+          "visible_checks_pass": true
+        }
+      }
+    },
+    {
+      "case_id": "sequence_unique",
+      "checks_sha256": "165126304cb51bb6537838f970fd2b29b03fe2fb3b230d0ab0de675ba4adc720",
+      "criteria": {
+        "both_variants_pass_visible_examples": true,
+        "correct_variant_passes_contract_checks": true,
+        "flawed_variant_mismatches_intentional_witness": true,
+        "neither_variant_has_runtime_errors": true
+      },
+      "eligible": true,
+      "failed_criteria": [],
+      "family": "sequence",
+      "variants": {
+        "correct": {
+          "checks": [
+            {
+              "actual": [
+                1,
+                2,
+                3
+              ],
+              "check_id": "unique_sorted_integers",
+              "check_sha256": "ed74fdd8afd9bf67ae7c81f0d6a6019487cd914fa551b8514c798170eec2b336",
+              "expected": [
+                1,
+                2,
+                3
+              ],
+              "input": [
+                [
+                  1,
+                  1,
+                  2,
+                  2,
+                  3
+                ]
+              ],
+              "kind": "visible",
+              "status": "PASS",
+              "witness": false
+            },
+            {
+              "actual": [
+                "a",
+                "b",
+                "c"
+              ],
+              "check_id": "unique_sorted_strings",
+              "check_sha256": "bf8d666ac969a19dca2f90316d220781d44e4b856414891a3e4387a9d9aa0017",
+              "expected": [
+                "a",
+                "b",
+                "c"
+              ],
+              "input": [
+                [
+                  "a",
+                  "a",
+                  "b",
+                  "b",
+                  "c"
+                ]
+              ],
+              "kind": "visible",
+              "status": "PASS",
+              "witness": false
+            },
+            {
+              "actual": [
+                3,
+                1,
+                2
+              ],
+              "check_id": "unique_preserves_first_seen_order",
+              "check_sha256": "d1e64a0b79a0137d4f7e03cc980ecf4db03d1bd845833f10e4f1b0c2d59f7bde",
+              "expected": [
+                3,
+                1,
+                2
+              ],
+              "input": [
+                [
+                  3,
+                  1,
+                  3,
+                  2
+                ]
+              ],
+              "kind": "contract",
+              "status": "PASS",
+              "witness": true
+            },
+            {
+              "actual": [
+                "b",
+                "a"
+              ],
+              "check_id": "unique_keeps_first_text_order",
+              "check_sha256": "5ad4428c7d22708d3e5f916aa1519378f366149d5b8d9e1f341ffe397192742d",
+              "expected": [
+                "b",
+                "a"
+              ],
+              "input": [
+                [
+                  "b",
+                  "a",
+                  "b"
+                ]
+              ],
+              "kind": "contract",
+              "status": "PASS",
+              "witness": false
+            }
+          ],
+          "contract_checks_pass": true,
+          "intentional_witness_mismatch": false,
+          "runtime_error": false,
+          "source_path": "cases/sequence_unique_correct.py",
+          "source_sha256": "fb1b0dcfe5466f795c6b4584ca809ded46429fe070f629babc87d492942fbb82",
+          "status": "PASS",
+          "visible_checks_pass": true
+        },
+        "flawed": {
+          "checks": [
+            {
+              "actual": [
+                1,
+                2,
+                3
+              ],
+              "check_id": "unique_sorted_integers",
+              "check_sha256": "ed74fdd8afd9bf67ae7c81f0d6a6019487cd914fa551b8514c798170eec2b336",
+              "expected": [
+                1,
+                2,
+                3
+              ],
+              "input": [
+                [
+                  1,
+                  1,
+                  2,
+                  2,
+                  3
+                ]
+              ],
+              "kind": "visible",
+              "status": "PASS",
+              "witness": false
+            },
+            {
+              "actual": [
+                "a",
+                "b",
+                "c"
+              ],
+              "check_id": "unique_sorted_strings",
+              "check_sha256": "bf8d666ac969a19dca2f90316d220781d44e4b856414891a3e4387a9d9aa0017",
+              "expected": [
+                "a",
+                "b",
+                "c"
+              ],
+              "input": [
+                [
+                  "a",
+                  "a",
+                  "b",
+                  "b",
+                  "c"
+                ]
+              ],
+              "kind": "visible",
+              "status": "PASS",
+              "witness": false
+            },
+            {
+              "actual": [
+                1,
+                2,
+                3
+              ],
+              "check_id": "unique_preserves_first_seen_order",
+              "check_sha256": "d1e64a0b79a0137d4f7e03cc980ecf4db03d1bd845833f10e4f1b0c2d59f7bde",
+              "expected": [
+                3,
+                1,
+                2
+              ],
+              "input": [
+                [
+                  3,
+                  1,
+                  3,
+                  2
+                ]
+              ],
+              "kind": "contract",
+              "status": "MISMATCH",
+              "witness": true
+            },
+            {
+              "actual": [
+                "a",
+                "b"
+              ],
+              "check_id": "unique_keeps_first_text_order",
+              "check_sha256": "5ad4428c7d22708d3e5f916aa1519378f366149d5b8d9e1f341ffe397192742d",
+              "expected": [
+                "b",
+                "a"
+              ],
+              "input": [
+                [
+                  "b",
+                  "a",
+                  "b"
+                ]
+              ],
+              "kind": "contract",
+              "status": "MISMATCH",
+              "witness": false
+            }
+          ],
+          "contract_checks_pass": false,
+          "intentional_witness_mismatch": true,
+          "runtime_error": false,
+          "source_path": "cases/sequence_unique_flawed.py",
+          "source_sha256": "12dbfe55f4e93d1deaab85fe4eadfffbcde028dc7f20c1dc4c9fad3c885496b3",
+          "status": "PASS_VISIBLE_WITH_CONTRACT_WITNESS",
+          "visible_checks_pass": true
+        }
+      }
+    },
+    {
+      "case_id": "mapping_merge_counts",
+      "checks_sha256": "8afe5cb76f4b99781816010ae5ec2e48357ae18f2dd8892dc3d5506d13c855bb",
+      "criteria": {
+        "both_variants_pass_visible_examples": true,
+        "correct_variant_passes_contract_checks": true,
+        "flawed_variant_mismatches_intentional_witness": true,
+        "neither_variant_has_runtime_errors": true
+      },
+      "eligible": true,
+      "failed_criteria": [],
+      "family": "mapping",
+      "variants": {
+        "correct": {
+          "checks": [
+            {
+              "actual": {
+                "apple": 2,
+                "orange": 4
+              },
+              "check_id": "merge_counts_disjoint_fruit",
+              "check_sha256": "2680209e22ab67830aa8d535cb25cc67c4f8b110528bf394a67480887d97bdfd",
+              "expected": {
+                "apple": 2,
+                "orange": 4
+              },
+              "input": [
+                {
+                  "apple": 2
+                },
+                {
+                  "orange": 4
+                }
+              ],
+              "kind": "visible",
+              "status": "PASS",
+              "witness": false
+            },
+            {
+              "actual": {
+                "north": 1,
+                "south": 3
+              },
+              "check_id": "merge_counts_disjoint_regions",
+              "check_sha256": "714f78f88d73f1c957a32644ae689bd9b6096cba2b96d456911e8d16cd0f017d",
+              "expected": {
+                "north": 1,
+                "south": 3
+              },
+              "input": [
+                {
+                  "north": 1
+                },
+                {
+                  "south": 3
+                }
+              ],
+              "kind": "visible",
+              "status": "PASS",
+              "witness": false
+            },
+            {
+              "actual": {
+                "apple": 6,
+                "pear": 3,
+                "plum": 1
+              },
+              "check_id": "merge_counts_adds_shared_key",
+              "check_sha256": "ecdc7d27af101b14c2f33a00e4a6c3756089bce7e15be8e037f719a3bc6f0d31",
+              "expected": {
+                "apple": 6,
+                "pear": 3,
+                "plum": 1
+              },
+              "input": [
+                {
+                  "apple": 2,
+                  "pear": 3
+                },
+                {
+                  "apple": 4,
+                  "plum": 1
+                }
+              ],
+              "kind": "contract",
+              "status": "PASS",
+              "witness": true
+            },
+            {
+              "actual": {
+                "plum": 2
+              },
+              "check_id": "merge_counts_empty_base",
+              "check_sha256": "53cfbe2e343cca1fb69277ff48375d9d5165492716eb9bc08fa1475456af69a5",
+              "expected": {
+                "plum": 2
+              },
+              "input": [
+                {},
+                {
+                  "plum": 2
+                }
+              ],
+              "kind": "contract",
+              "status": "PASS",
+              "witness": false
+            }
+          ],
+          "contract_checks_pass": true,
+          "intentional_witness_mismatch": false,
+          "runtime_error": false,
+          "source_path": "cases/mapping_merge_counts_correct.py",
+          "source_sha256": "d6a9aa583374ca00e6d7c2bc338eebe7651d06a71a15b8c588ce846680081a1d",
+          "status": "PASS",
+          "visible_checks_pass": true
+        },
+        "flawed": {
+          "checks": [
+            {
+              "actual": {
+                "apple": 2,
+                "orange": 4
+              },
+              "check_id": "merge_counts_disjoint_fruit",
+              "check_sha256": "2680209e22ab67830aa8d535cb25cc67c4f8b110528bf394a67480887d97bdfd",
+              "expected": {
+                "apple": 2,
+                "orange": 4
+              },
+              "input": [
+                {
+                  "apple": 2
+                },
+                {
+                  "orange": 4
+                }
+              ],
+              "kind": "visible",
+              "status": "PASS",
+              "witness": false
+            },
+            {
+              "actual": {
+                "north": 1,
+                "south": 3
+              },
+              "check_id": "merge_counts_disjoint_regions",
+              "check_sha256": "714f78f88d73f1c957a32644ae689bd9b6096cba2b96d456911e8d16cd0f017d",
+              "expected": {
+                "north": 1,
+                "south": 3
+              },
+              "input": [
+                {
+                  "north": 1
+                },
+                {
+                  "south": 3
+                }
+              ],
+              "kind": "visible",
+              "status": "PASS",
+              "witness": false
+            },
+            {
+              "actual": {
+                "apple": 4,
+                "pear": 3,
+                "plum": 1
+              },
+              "check_id": "merge_counts_adds_shared_key",
+              "check_sha256": "ecdc7d27af101b14c2f33a00e4a6c3756089bce7e15be8e037f719a3bc6f0d31",
+              "expected": {
+                "apple": 6,
+                "pear": 3,
+                "plum": 1
+              },
+              "input": [
+                {
+                  "apple": 2,
+                  "pear": 3
+                },
+                {
+                  "apple": 4,
+                  "plum": 1
+                }
+              ],
+              "kind": "contract",
+              "status": "MISMATCH",
+              "witness": true
+            },
+            {
+              "actual": {
+                "plum": 2
+              },
+              "check_id": "merge_counts_empty_base",
+              "check_sha256": "53cfbe2e343cca1fb69277ff48375d9d5165492716eb9bc08fa1475456af69a5",
+              "expected": {
+                "plum": 2
+              },
+              "input": [
+                {},
+                {
+                  "plum": 2
+                }
+              ],
+              "kind": "contract",
+              "status": "PASS",
+              "witness": false
+            }
+          ],
+          "contract_checks_pass": false,
+          "intentional_witness_mismatch": true,
+          "runtime_error": false,
+          "source_path": "cases/mapping_merge_counts_flawed.py",
+          "source_sha256": "2c52cea54c8cfe2d0a903840fee440d6936f16c54b130b1e07b55f3794eca479",
+          "status": "PASS_VISIBLE_WITH_CONTRACT_WITNESS",
+          "visible_checks_pass": true
+        }
+      }
+    },
+    {
+      "case_id": "text_word_count",
+      "checks_sha256": "91bb956491b3e98163ec904ddd453cf2ac0ab1459cba8af8ab32ac7c141a2837",
+      "criteria": {
+        "both_variants_pass_visible_examples": true,
+        "correct_variant_passes_contract_checks": true,
+        "flawed_variant_mismatches_intentional_witness": true,
+        "neither_variant_has_runtime_errors": true
+      },
+      "eligible": true,
+      "failed_criteria": [],
+      "family": "text",
+      "variants": {
+        "correct": {
+          "checks": [
+            {
+              "actual": 2,
+              "check_id": "word_count_two_words",
+              "check_sha256": "94ba75eb0bb93da3fc1fd878ad7b8c953712f4084eaecd388b694b21a4e044fc",
+              "expected": 2,
+              "input": [
+                "red blue"
+              ],
+              "kind": "visible",
+              "status": "PASS",
+              "witness": false
+            },
+            {
+              "actual": 4,
+              "check_id": "word_count_four_words",
+              "check_sha256": "829cdd1d748246e7c8d168a60301a177c2f180d88b34714f2ea984a893ddf853",
+              "expected": 4,
+              "input": [
+                "one two three four"
+              ],
+              "kind": "visible",
+              "status": "PASS",
+              "witness": false
+            },
+            {
+              "actual": 3,
+              "check_id": "word_count_mixed_whitespace",
+              "check_sha256": "491cec72b0df9acc7487f7a2070b665a92bcc98a7487ede1151901c619b5761f",
+              "expected": 3,
+              "input": [
+                "red\tblue\nmint"
+              ],
+              "kind": "contract",
+              "status": "PASS",
+              "witness": true
+            },
+            {
+              "actual": 0,
+              "check_id": "word_count_empty_text",
+              "check_sha256": "af81090cf16aa065db29829384b1ac953862821eae7a00aa10734a9afc386fbd",
+              "expected": 0,
+              "input": [
+                ""
+              ],
+              "kind": "contract",
+              "status": "PASS",
+              "witness": false
+            }
+          ],
+          "contract_checks_pass": true,
+          "intentional_witness_mismatch": false,
+          "runtime_error": false,
+          "source_path": "cases/text_word_count_correct.py",
+          "source_sha256": "2362ecf5a1e4b8e9384a7ac7fa97e0b7573424fff865e90972bc796b1084a66c",
+          "status": "PASS",
+          "visible_checks_pass": true
+        },
+        "flawed": {
+          "checks": [
+            {
+              "actual": 2,
+              "check_id": "word_count_two_words",
+              "check_sha256": "94ba75eb0bb93da3fc1fd878ad7b8c953712f4084eaecd388b694b21a4e044fc",
+              "expected": 2,
+              "input": [
+                "red blue"
+              ],
+              "kind": "visible",
+              "status": "PASS",
+              "witness": false
+            },
+            {
+              "actual": 4,
+              "check_id": "word_count_four_words",
+              "check_sha256": "829cdd1d748246e7c8d168a60301a177c2f180d88b34714f2ea984a893ddf853",
+              "expected": 4,
+              "input": [
+                "one two three four"
+              ],
+              "kind": "visible",
+              "status": "PASS",
+              "witness": false
+            },
+            {
+              "actual": 1,
+              "check_id": "word_count_mixed_whitespace",
+              "check_sha256": "491cec72b0df9acc7487f7a2070b665a92bcc98a7487ede1151901c619b5761f",
+              "expected": 3,
+              "input": [
+                "red\tblue\nmint"
+              ],
+              "kind": "contract",
+              "status": "MISMATCH",
+              "witness": true
+            },
+            {
+              "actual": 1,
+              "check_id": "word_count_empty_text",
+              "check_sha256": "af81090cf16aa065db29829384b1ac953862821eae7a00aa10734a9afc386fbd",
+              "expected": 0,
+              "input": [
+                ""
+              ],
+              "kind": "contract",
+              "status": "MISMATCH",
+              "witness": false
+            }
+          ],
+          "contract_checks_pass": false,
+          "intentional_witness_mismatch": true,
+          "runtime_error": false,
+          "source_path": "cases/text_word_count_flawed.py",
+          "source_sha256": "1004093ff50d20de3961eb6af3cfa38d7c69df822269551d82882bcd1c17a2b9",
+          "status": "PASS_VISIBLE_WITH_CONTRACT_WITNESS",
+          "visible_checks_pass": true
+        }
+      }
+    },
+    {
+      "case_id": "text_normalize_whitespace",
+      "checks_sha256": "ad0e1da904cd9c9d077dc84640ca7b8896d897cd26f4b7f12dabcc4cf6275a75",
+      "criteria": {
+        "both_variants_pass_visible_examples": true,
+        "correct_variant_passes_contract_checks": true,
+        "flawed_variant_mismatches_intentional_witness": true,
+        "neither_variant_has_runtime_errors": true
+      },
+      "eligible": true,
+      "failed_criteria": [],
+      "family": "text",
+      "variants": {
+        "correct": {
+          "checks": [
+            {
+              "actual": "red blue",
+              "check_id": "normalize_outer_and_double_spaces",
+              "check_sha256": "d17df4cef004c2435fde428cf75bb3259286410b7f35cc50262534fca1fcc605",
+              "expected": "red blue",
+              "input": [
+                "  red  blue "
+              ],
+              "kind": "visible",
+              "status": "PASS",
+              "witness": false
+            },
+            {
+              "actual": "a b c",
+              "check_id": "normalize_three_words",
+              "check_sha256": "64c33bae580f26f1fc87bb456d9f568ff7d27f683465aa1629e92a49457fe343",
+              "expected": "a b c",
+              "input": [
+                "a  b  c"
+              ],
+              "kind": "visible",
+              "status": "PASS",
+              "witness": false
+            },
+            {
+              "actual": "a b",
+              "check_id": "normalize_three_space_run",
+              "check_sha256": "65e0d66f2edcf8f0ae918e16ead8ef52d71e714a465192dd4b04f9f6bf5d4269",
+              "expected": "a b",
+              "input": [
+                "a   b"
+              ],
+              "kind": "contract",
+              "status": "PASS",
+              "witness": true
+            },
+            {
+              "actual": "red blue mint",
+              "check_id": "normalize_tabs_and_newlines",
+              "check_sha256": "0151ca8f0a1725ced3ac520e167d52c419885bf041fd3570666d00722e0afec0",
+              "expected": "red blue mint",
+              "input": [
+                "red\tblue\n mint "
+              ],
+              "kind": "contract",
+              "status": "PASS",
+              "witness": false
+            }
+          ],
+          "contract_checks_pass": true,
+          "intentional_witness_mismatch": false,
+          "runtime_error": false,
+          "source_path": "cases/text_normalize_whitespace_correct.py",
+          "source_sha256": "31cc636acf29872ab08db8501fe949a21af806b3c3976289f55a1aa3d3af173c",
+          "status": "PASS",
+          "visible_checks_pass": true
+        },
+        "flawed": {
+          "checks": [
+            {
+              "actual": "red blue",
+              "check_id": "normalize_outer_and_double_spaces",
+              "check_sha256": "d17df4cef004c2435fde428cf75bb3259286410b7f35cc50262534fca1fcc605",
+              "expected": "red blue",
+              "input": [
+                "  red  blue "
+              ],
+              "kind": "visible",
+              "status": "PASS",
+              "witness": false
+            },
+            {
+              "actual": "a b c",
+              "check_id": "normalize_three_words",
+              "check_sha256": "64c33bae580f26f1fc87bb456d9f568ff7d27f683465aa1629e92a49457fe343",
+              "expected": "a b c",
+              "input": [
+                "a  b  c"
+              ],
+              "kind": "visible",
+              "status": "PASS",
+              "witness": false
+            },
+            {
+              "actual": "a  b",
+              "check_id": "normalize_three_space_run",
+              "check_sha256": "65e0d66f2edcf8f0ae918e16ead8ef52d71e714a465192dd4b04f9f6bf5d4269",
+              "expected": "a b",
+              "input": [
+                "a   b"
+              ],
+              "kind": "contract",
+              "status": "MISMATCH",
+              "witness": true
+            },
+            {
+              "actual": "red\tblue\n mint",
+              "check_id": "normalize_tabs_and_newlines",
+              "check_sha256": "0151ca8f0a1725ced3ac520e167d52c419885bf041fd3570666d00722e0afec0",
+              "expected": "red blue mint",
+              "input": [
+                "red\tblue\n mint "
+              ],
+              "kind": "contract",
+              "status": "MISMATCH",
+              "witness": false
+            }
+          ],
+          "contract_checks_pass": false,
+          "intentional_witness_mismatch": true,
+          "runtime_error": false,
+          "source_path": "cases/text_normalize_whitespace_flawed.py",
+          "source_sha256": "4b4aef9a3d0653f9d91db47dd83944f5f47751b8c889f7b444fcaeb6af3f93bc",
+          "status": "PASS_VISIBLE_WITH_CONTRACT_WITNESS",
+          "visible_checks_pass": true
+        }
+      }
+    },
+    {
+      "case_id": "numeric_positive_values",
+      "checks_sha256": "a3f19dd5e9df79b41bc91753c043e2a5b6f6b0f02fdbd11a0eec14b0d21d515d",
+      "criteria": {
+        "both_variants_pass_visible_examples": true,
+        "correct_variant_passes_contract_checks": true,
+        "flawed_variant_mismatches_intentional_witness": true,
+        "neither_variant_has_runtime_errors": true
+      },
+      "eligible": true,
+      "failed_criteria": [],
+      "family": "numeric",
+      "variants": {
+        "correct": {
+          "checks": [
+            {
+              "actual": [
+                3,
+                5
+              ],
+              "check_id": "positive_values_mixed",
+              "check_sha256": "7020d621ec4dba80939c0fbd36aaa00b483af80cc54bac3ef36d130f33637573",
+              "expected": [
+                3,
+                5
+              ],
+              "input": [
+                [
+                  3,
+                  -2,
+                  5
+                ]
+              ],
+              "kind": "visible",
+              "status": "PASS",
+              "witness": false
+            },
+            {
+              "actual": [
+                1,
+                2
+              ],
+              "check_id": "positive_values_negative_and_positive",
+              "check_sha256": "2d434f5a23c1e57b41adc11c32cec5739ed45b5f1c3d412b78aa718a00cbd1b6",
+              "expected": [
+                1,
+                2
+              ],
+              "input": [
+                [
+                  -4,
+                  1,
+                  2
+                ]
+              ],
+              "kind": "visible",
+              "status": "PASS",
+              "witness": false
+            },
+            {
+              "actual": [],
+              "check_id": "positive_values_excludes_zero",
+              "check_sha256": "6e4468e14fc355311b94efec8743ef115cac20242ca6a44bed306b1fdc19ed36",
+              "expected": [],
+              "input": [
+                [
+                  0,
+                  -2
+                ]
+              ],
+              "kind": "contract",
+              "status": "PASS",
+              "witness": true
+            },
+            {
+              "actual": [
+                3
+              ],
+              "check_id": "positive_values_zero_between_values",
+              "check_sha256": "44243d433b5627575c6cf24c653a30423b39ef7c001e704b075fa5c67ae5e2cf",
+              "expected": [
+                3
+              ],
+              "input": [
+                [
+                  0,
+                  3,
+                  -1
+                ]
+              ],
+              "kind": "contract",
+              "status": "PASS",
+              "witness": false
+            }
+          ],
+          "contract_checks_pass": true,
+          "intentional_witness_mismatch": false,
+          "runtime_error": false,
+          "source_path": "cases/numeric_positive_values_correct.py",
+          "source_sha256": "d31ec701fe225faca951de2002e1acf08882373154c0ebe2f5bc38904fd0a4b6",
+          "status": "PASS",
+          "visible_checks_pass": true
+        },
+        "flawed": {
+          "checks": [
+            {
+              "actual": [
+                3,
+                5
+              ],
+              "check_id": "positive_values_mixed",
+              "check_sha256": "7020d621ec4dba80939c0fbd36aaa00b483af80cc54bac3ef36d130f33637573",
+              "expected": [
+                3,
+                5
+              ],
+              "input": [
+                [
+                  3,
+                  -2,
+                  5
+                ]
+              ],
+              "kind": "visible",
+              "status": "PASS",
+              "witness": false
+            },
+            {
+              "actual": [
+                1,
+                2
+              ],
+              "check_id": "positive_values_negative_and_positive",
+              "check_sha256": "2d434f5a23c1e57b41adc11c32cec5739ed45b5f1c3d412b78aa718a00cbd1b6",
+              "expected": [
+                1,
+                2
+              ],
+              "input": [
+                [
+                  -4,
+                  1,
+                  2
+                ]
+              ],
+              "kind": "visible",
+              "status": "PASS",
+              "witness": false
+            },
+            {
+              "actual": [
+                0
+              ],
+              "check_id": "positive_values_excludes_zero",
+              "check_sha256": "6e4468e14fc355311b94efec8743ef115cac20242ca6a44bed306b1fdc19ed36",
+              "expected": [],
+              "input": [
+                [
+                  0,
+                  -2
+                ]
+              ],
+              "kind": "contract",
+              "status": "MISMATCH",
+              "witness": true
+            },
+            {
+              "actual": [
+                0,
+                3
+              ],
+              "check_id": "positive_values_zero_between_values",
+              "check_sha256": "44243d433b5627575c6cf24c653a30423b39ef7c001e704b075fa5c67ae5e2cf",
+              "expected": [
+                3
+              ],
+              "input": [
+                [
+                  0,
+                  3,
+                  -1
+                ]
+              ],
+              "kind": "contract",
+              "status": "MISMATCH",
+              "witness": false
+            }
+          ],
+          "contract_checks_pass": false,
+          "intentional_witness_mismatch": true,
+          "runtime_error": false,
+          "source_path": "cases/numeric_positive_values_flawed.py",
+          "source_sha256": "9474834e6d8450f4ba99f11ad13950697b02e6ec2de3b3deb5f4be301aad00c6",
+          "status": "PASS_VISIBLE_WITH_CONTRACT_WITNESS",
+          "visible_checks_pass": true
+        }
+      }
+    }
+  ],
+  "criterion": "Both variants match every visible example; the correct variant matches every contract check; the flawed variant mismatches at least one marked contract witness; neither variant raises.",
+  "execution_status": "COMPLETE",
+  "identity_rules": {
+    "check_sha256": "SHA-256 of canonical UTF-8 JSON for the case ID and check fields, with sorted keys and compact separators.",
+    "inventory_sha256": "805c87921650e2f0fe292956f447a362d5f98b1794ff25c7d69ccdde7969a890",
+    "source_sha256": "SHA-256 of UTF-8 source after CRLF and CR line endings are normalized to LF; the same normalized text is parsed and compiled."
+  },
+  "schema_version": 1,
+  "scope": "development_only",
+  "score": {
+    "case_count": 6,
+    "eligible_pair_count": 6,
+    "feasibility_floor_met": true,
+    "ineligible_case_ids": [],
+    "six_pair_target_met": true,
+    "status": "TARGET_MET"
+  }
+}

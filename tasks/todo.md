@@ -54,3 +54,12 @@ Cleanup census found zero task-owned transport clients, the user's pre-existing 
 ### Companion review
 
 The standalone guide and 7:54.091 H.264/AAC film are bound to explainer candidate `86abbf3395354dae72e73a34c9a2d76acfa6875ff511d0798365e8e78c26a4ae`. The successor resolved the review batch, received APPROVED and final QA SHIP IT, and passed the configured Ruff checks, all 105 model-free tests, 72/72 saved holdout replay, source/media hashes and forced renderer failure checks. Chrome local-file playback, offline reload, chapter jumps, transcript, responsive layout, keyboard input/Tab/Space, accessible labels and H16 outcomes were observed. Caption timing within each line is approximate; no human listening or audible screen-reader audit is claimed. The frozen scientific and publication closure remains unchanged. Only the new companion bundle and this task record are included in this release.
+
+## Partial test evidence follow-up
+
+- [x] Review the pilot, close prior work, and scope a separate development screen.
+- [x] Approve the design for six matched pairs and an executable screen before measuring them.
+- [x] Run the screen and prepare a first-discussion brief with a proposed study and decision gates.
+- [x] Review and verify the same candidate, reproduce the saved screen and pilot replay, and publish the additive release.
+
+The development screen met its predeclared target with six qualifying pairs and zero model calls. Reviewer approval and QA SHIP IT apply to the 18 follow-up files, with LF-normalized path-to-SHA-256 manifest digest `48abed0ad2399169b4c0cabb9466f70e7eecc59f656cd796873479bac1076710`. QA reproduced the saved summary byte for byte and passed all seven focused tests, including refusal to use a pilot file as an output. The existing 105 model-free tests, Ruff checks, and 72-cell public holdout replay passed. The next research decision is whether to expand from these examples to matched real patches with independently checked labels and incomplete visible evidence.
